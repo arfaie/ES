@@ -63,7 +63,6 @@ namespace E_School.Models.DomainModels
         public DbSet<tbl_registrationCourses> tbl_registrationCourses { get; set; }
         public DbSet<tbl_registrationList> tbl_registrationList { get; set; }
         public DbSet<tbl_scores> tbl_scores { get; set; }
-        public DbSet<tbl_Setting> tbl_Setting { get; set; }
         public DbSet<tbl_studentRegister> tbl_studentRegister { get; set; }
         public DbSet<tbl_students> tbl_students { get; set; }
         public DbSet<tbl_studentsCosts> tbl_studentsCosts { get; set; }
@@ -89,8 +88,9 @@ namespace E_School.Models.DomainModels
         public DbSet<view_studentRegister> view_studentRegister { get; set; }
         public DbSet<View_teacherSchedule> View_teacherSchedule { get; set; }
         public DbSet<view_Terms> view_Terms { get; set; }
-        public DbSet<tbl_SiteContent> tbl_SiteContent { get; set; }
         public DbSet<View_studentScore> View_studentScore { get; set; }
-        public DbSet<tbl_SiteContent1> tbl_SiteContent1 { get; set; }
+        public DbSet<tbl_SiteContent> tbl_SiteContent { get; set; }
+        public DbSet<tbl_Setting> tbl_Setting { get; set; }
+        public DbSet<tbl_Avrages> tbl_Avrages { get; set; }
     }
 }

@@ -58,31 +58,32 @@ namespace E_School.Helpers.Utitlies
         {
 
             int l = text.Length;
-            int test= Convert.ToInt32(Math.Ceiling(Convert.ToDouble(text.Length) / 67));
+            int test = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(text.Length) / 67));
             return text.Length <= 70 ? 1 : Convert.ToInt32(Math.Ceiling(Convert.ToDouble(text.Length) / 67));
         }
 
-        public string Monthes(int id) 
+        public string Monthes(int id)
         {
             int today = getTodayDate();
+            string Today = today.ToString().Substring(0, 4);
             switch (id)
             {
                 case 1:
-                    return today.ToString() + "0701,0730";
+                    return Today + "0701," + Today + "0730";
                 case 2:
-                    return today.ToString() + "0801,0830";
+                    return Today + "0801," + Today + "0830";
                 case 3:
-                    return today.ToString() + "0901,0930";
+                    return Today + "0901," + Today + "0930";
                 case 4:
-                    return today.ToString() + "1001,1030";
+                    return Today + "1001," + Today + "1030";
                 case 5:
-                    return today.ToString() + "1101,1130";
+                    return Today + "1101," + Today + "1130";
                 case 6:
-                    return today.ToString() + "1201,1230";
+                    return Today + "1201," + Today + "1230";
                 case 7:
-                    return today.ToString() + "0101,0131";
+                    return Today + "0101," + Today + "0131";
                 case 8:
-                    return today.ToString() + "0201,0231";
+                    return Today + "0201," + Today + "0231";
             }
             return null;
         }

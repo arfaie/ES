@@ -12,15 +12,14 @@ namespace E_School.Models.DomainModels
     using System;
     using System.Collections.Generic;
     
-    public partial class tbl_Setting
+    public partial class tbl_Avrages
     {
-        public int idSetting { get; set; }
-        public string schoolName { get; set; }
-        public string manager { get; set; }
-        public int smsCount { get; set; }
-        public double Version { get; set; }
-        public string teacherVersion { get; set; }
-        public string Website { get; set; }
-        public string azmoonWebsite { get; set; }
+        public int id { get; set; }
+        public int idDesScore { get; set; }
+        public double Score { get; set; }
+        public int idYear { get; set; }
+        public int idClass { get; set; }
+        public int idLesson { get; set; }
+        public int idStudent { get; set; }
     }
 }

@@ -26,5 +26,9 @@ namespace E_School.Models.DomainModels
         public int idYear { get; set; }
         public string desScore { get; set; }
         public int idExam { get; set; }
+        public Nullable<int> numScore { get; set; }
+        public int idLesson { get; set; }
+        public string FName { get; set; }
+        public string LName { get; set; }
     }
 }

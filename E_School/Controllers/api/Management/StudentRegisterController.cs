@@ -22,14 +22,12 @@ namespace E_School.Controllers.api.Management
     public class StudentRegisterController : ApiController
     {
         StudentRegisterRepository bl = new StudentRegisterRepository();
-        YearRepository blYear = new YearRepository();
 
         [ActionName("select")]
         [HttpGet]
         public List<view_studentRegister> select([FromUri] int idYear, [FromUri]int idLevel, [FromUri] int idClass)
         {
-            int Today = 0.GetPersianDate() ;
-            idYear = blYear.Where(x => x.yearStart <= Today && x.yearEnd >= Today).FirstOrDefault().idYear;
+
             var list = bl.Where(x => x.idClass == idClass & x.idYear == idYear/* & x.idLevel == idLevel*/).ToList();
             return list;
 

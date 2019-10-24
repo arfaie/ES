@@ -314,5 +314,16 @@ namespace E_School.Models.Repositories.api
 
             return date;
         }
+        public IQueryable<View_studentScore> Where(System.Linq.Expressions.Expression<Func<View_studentScore, bool>> predicate)
+        {
+            try
+            {
+                return db.View_studentScore.Where(predicate);
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }

@@ -43,7 +43,6 @@
         <EntityTypeShape EntityType="schoolModel.tbl_registrationCourses" Width="1.5" PointX="9" PointY="12.5" />
         <EntityTypeShape EntityType="schoolModel.tbl_registrationList" Width="1.5" PointX="11.25" PointY="17" />
         <EntityTypeShape EntityType="schoolModel.tbl_scores" Width="1.5" PointX="8.25" PointY="16.5" />
-        <EntityTypeShape EntityType="schoolModel.tbl_Setting" Width="1.5" PointX="11.75" PointY="7.625" />
         <EntityTypeShape EntityType="schoolModel.tbl_studentRegister" Width="1.5" PointX="5.25" PointY="15.25" />
         <EntityTypeShape EntityType="schoolModel.tbl_students" Width="1.5" PointX="3" PointY="16.875" />
         <EntityTypeShape EntityType="schoolModel.tbl_studentsCosts" Width="1.5" PointX="5.25" PointY="25" />
@@ -136,8 +135,10 @@
         <AssociationConnector Association="schoolModel.FK_tbl_studentsDisciplines_tbl_terms" />
         <AssociationConnector Association="schoolModel.FK_tbl_terms_tbl_years" />
         <EntityTypeShape EntityType="schoolModel.tbl_SiteContent" Width="1.5" PointX="20.375" PointY="8.75" />
-        <EntityTypeShape EntityType="schoolModel.View_studentScore" Width="1.5" PointX="18.375" PointY="17.75" />
         <EntityTypeShape EntityType="schoolModel.tbl_SiteContent1" Width="1.5" PointX="20.75" PointY="11.75" />
+        <EntityTypeShape EntityType="schoolModel.View_studentScore" Width="1.5" PointX="18.75" PointY="17.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_Setting" Width="1.5" PointX="20.375" PointY="11.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_Avrages" Width="1.5" PointX="21.375" PointY="15.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

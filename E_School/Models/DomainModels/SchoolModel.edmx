@@ -33,6 +33,18 @@
           <Property Name="idRef" Type="int" Nullable="false" />
           <Property Name="userAnswer" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="tbl_Avrages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="idDesScore" Type="int" Nullable="false" />
+          <Property Name="Score" Type="float" Nullable="false" />
+          <Property Name="idYear" Type="int" Nullable="false" />
+          <Property Name="idClass" Type="int" Nullable="false" />
+          <Property Name="idLesson" Type="int" Nullable="false" />
+          <Property Name="idStudent" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="tbl_bells">
           <Key>
             <PropertyRef Name="idBells" />
@@ -422,8 +434,17 @@
           <Property Name="Version" Type="float" Nullable="false" />
           <Property Name="teacherVersion" Type="nvarchar" MaxLength="5" />
           <Property Name="Website" Type="nvarchar" MaxLength="50" />
+          <Property Name="azmoonWebsite" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        
+        <EntityType Name="tbl_SiteContent">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Tell1" Type="nvarchar" MaxLength="11" />
+          <Property Name="Tell2" Type="nvarchar" MaxLength="11" />
+        </EntityType>
         <EntityType Name="tbl_studentRegister">
           <Key>
             <PropertyRef Name="idStudReg" />
@@ -590,7 +611,7 @@
           <Property Name="des" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_absentation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_absentation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_absentation">
           <Key>
             <PropertyRef Name="idAbsentation" />
@@ -612,7 +633,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_absentation' does not have a prim
           <Property Name="idDataTable" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.view_Classes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.view_Classes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="view_Classes">
           <Key>
             <PropertyRef Name="className" />
@@ -635,7 +656,7 @@ warning 6002: The table/view 'fajr_DB.dbo.view_Classes' does not have a primary 
           <Property Name="idYear" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_classStudents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_classStudents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_classStudents">
           <Key>
             <PropertyRef Name="idClass" />
@@ -651,7 +672,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_classStudents' does not have a pr
           <Property Name="idYear" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_discipline' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_discipline' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_discipline">
           <Key>
             <PropertyRef Name="idStudentDisciplines" />
@@ -676,7 +697,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_discipline' does not have a prima
           <Property Name="idTerm" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_Exam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_Exam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_Exam">
           <Key>
             <PropertyRef Name="idExam" />
@@ -710,7 +731,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_Exam' does not have a primary key
           <Property Name="des" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_homeWork' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_homeWork' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_homeWork">
           <Key>
             <PropertyRef Name="idClass" />
@@ -742,7 +763,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_homeWork' does not have a primary
           <Property Name="LName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_HomeWorkResponse' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_HomeWorkResponse' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_HomeWorkResponse">
           <Key>
             <PropertyRef Name="idRecHomeWork" />
@@ -763,7 +784,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_HomeWorkResponse' does not have a
           <Property Name="answerBody" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.view_Lesson' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.view_Lesson' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="view_Lesson">
           <Key>
             <PropertyRef Name="lessonName" />
@@ -787,7 +808,7 @@ warning 6002: The table/view 'fajr_DB.dbo.view_Lesson' does not have a primary k
           <Property Name="idLessonType" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_StudentFinancial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_StudentFinancial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_StudentFinancial">
           <Key>
             <PropertyRef Name="idDebt" />
@@ -811,7 +832,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_StudentFinancial' does not have a
           <Property Name="Expr1" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_studentInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_studentInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_studentInfo">
           <Key>
             <PropertyRef Name="idStudent" />
@@ -836,7 +857,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_studentInfo' does not have a prim
           <Property Name="imgPersonal" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_studentMessage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_studentMessage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_studentMessage">
           <Key>
             <PropertyRef Name="idMsgRecord" />
@@ -867,7 +888,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_studentMessage' does not have a p
           <Property Name="isActiveRecive" Type="bit" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.view_studentRegister' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.view_studentRegister' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="view_studentRegister">
           <Key>
             <PropertyRef Name="idStudReg" />
@@ -901,7 +922,7 @@ warning 6002: The table/view 'fajr_DB.dbo.view_studentRegister' does not have a 
           <Property Name="idYear" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_studentScore' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_studentScore' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_studentScore">
           <Key>
             <PropertyRef Name="idScore" />
@@ -913,6 +934,9 @@ warning 6002: The table/view 'fajr_DB.dbo.View_studentScore' does not have a pri
             <PropertyRef Name="examType" />
             <PropertyRef Name="idYear" />
             <PropertyRef Name="idExam" />
+            <PropertyRef Name="idLesson" />
+            <PropertyRef Name="FName" />
+            <PropertyRef Name="LName" />
           </Key>
           <Property Name="idScore" Type="int" Nullable="false" />
           <Property Name="idStudent" Type="int" Nullable="false" />
@@ -926,9 +950,13 @@ warning 6002: The table/view 'fajr_DB.dbo.View_studentScore' does not have a pri
           <Property Name="idYear" Type="int" Nullable="false" />
           <Property Name="desScore" Type="nvarchar" MaxLength="50" />
           <Property Name="idExam" Type="int" Nullable="false" />
+          <Property Name="numScore" Type="int" />
+          <Property Name="idLesson" Type="int" Nullable="false" />
+          <Property Name="FName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.View_teacherSchedule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.View_teacherSchedule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="View_teacherSchedule">
           <Key>
             <PropertyRef Name="idDataTable" />
@@ -954,7 +982,7 @@ warning 6002: The table/view 'fajr_DB.dbo.View_teacherSchedule' does not have a 
           <Property Name="idLesson2" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'fajr_DB.dbo.view_Terms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'anvarkh1_USR.dbo.view_Terms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="view_Terms">
           <Key>
             <PropertyRef Name="idTerm" />
@@ -1766,6 +1794,7 @@ warning 6002: The table/view 'fajr_DB.dbo.view_Terms' does not have a primary ke
           <EntitySet Name="tbl_absentation" EntityType="Self.tbl_absentation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Admin_@_#" EntityType="Self.tbl_Admin_@_#" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_answers" EntityType="Self.tbl_answers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Avrages" EntityType="Self.tbl_Avrages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_bells" EntityType="Self.tbl_bells" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_classes" EntityType="Self.tbl_classes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_costs" EntityType="Self.tbl_costs" Schema="dbo" store:Type="Tables" />
@@ -1802,6 +1831,7 @@ warning 6002: The table/view 'fajr_DB.dbo.view_Terms' does not have a primary ke
           <EntitySet Name="tbl_registrationList" EntityType="Self.tbl_registrationList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_scores" EntityType="Self.tbl_scores" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Setting" EntityType="Self.tbl_Setting" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_SiteContent" EntityType="Self.tbl_SiteContent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_studentRegister" EntityType="Self.tbl_studentRegister" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_students" EntityType="Self.tbl_students" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_studentsCosts" EntityType="Self.tbl_studentsCosts" Schema="dbo" store:Type="Tables" />
@@ -2005,7 +2035,11 @@ FROM [dbo].[view_studentRegister] AS [view_studentRegister]</DefiningQuery>
 [View_studentScore].[des] AS [des], 
 [View_studentScore].[idYear] AS [idYear], 
 [View_studentScore].[desScore] AS [desScore], 
-[View_studentScore].[idExam] AS [idExam]
+[View_studentScore].[idExam] AS [idExam], 
+[View_studentScore].[numScore] AS [numScore], 
+[View_studentScore].[idLesson] AS [idLesson], 
+[View_studentScore].[FName] AS [FName], 
+[View_studentScore].[LName] AS [LName]
 FROM [dbo].[View_studentScore] AS [View_studentScore]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="View_teacherSchedule" EntityType="Self.View_teacherSchedule" store:Type="Views" store:Schema="dbo">
@@ -2342,7 +2376,6 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
           <EntitySet Name="tbl_registrationCourses" EntityType="schoolModel.tbl_registrationCourses" />
           <EntitySet Name="tbl_registrationList" EntityType="schoolModel.tbl_registrationList" />
           <EntitySet Name="tbl_scores" EntityType="schoolModel.tbl_scores" />
-          <EntitySet Name="tbl_Setting" EntityType="schoolModel.tbl_Setting" />
           <EntitySet Name="tbl_studentRegister" EntityType="schoolModel.tbl_studentRegister" />
           <EntitySet Name="tbl_students" EntityType="schoolModel.tbl_students" />
           <EntitySet Name="tbl_studentsCosts" EntityType="schoolModel.tbl_studentsCosts" />
@@ -2633,6 +2666,9 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
             <End Role="tbl_terms" EntitySet="tbl_terms" />
           </AssociationSet>
           <EntitySet Name="View_studentScore" EntityType="schoolModel.View_studentScore" />
+          <EntitySet Name="tbl_SiteContent" EntityType="schoolModel.tbl_SiteContent" />
+          <EntitySet Name="tbl_Setting" EntityType="schoolModel.tbl_Setting" />
+          <EntitySet Name="tbl_Avrages" EntityType="schoolModel.tbl_Avrages" />
         </EntityContainer>
         <EntityType Name="tbl_absentation">
           <Key>
@@ -3040,18 +3076,6 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
           <Property Name="score" Type="Double" Nullable="false" />
           <Property Name="des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           </EntityType>
-        <EntityType Name="tbl_Setting">
-          <Key>
-            <PropertyRef Name="idSetting" />
-          </Key>
-          <Property Name="idSetting" Type="Int32" Nullable="false" />
-          <Property Name="schoolName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="manager" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="smsCount" Type="Int32" Nullable="false" />
-          <Property Name="Version" Type="Double" Nullable="false" />
-          <Property Name="teacherVersion" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="tbl_studentRegister">
           <Key>
             <PropertyRef Name="idStudReg" />
@@ -4335,7 +4359,6 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        
         <EntityType Name="View_studentScore">
           <Key>
             <PropertyRef Name="idScore" />
@@ -4347,6 +4370,9 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
             <PropertyRef Name="examType" />
             <PropertyRef Name="idYear" />
             <PropertyRef Name="idExam" />
+            <PropertyRef Name="idLesson" />
+            <PropertyRef Name="FName" />
+            <PropertyRef Name="LName" />
           </Key>
           <Property Name="idScore" Type="Int32" Nullable="false" />
           <Property Name="idStudent" Type="Int32" Nullable="false" />
@@ -4360,6 +4386,44 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
           <Property Name="idYear" Type="Int32" Nullable="false" />
           <Property Name="desScore" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="idExam" Type="Int32" Nullable="false" />
+          <Property Name="numScore" Type="Int32" />
+          <Property Name="idLesson" Type="Int32" Nullable="false" />
+          <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_SiteContent">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tell1" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Tell2" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Setting">
+          <Key>
+            <PropertyRef Name="idSetting" />
+          </Key>
+          <Property Name="idSetting" Type="Int32" Nullable="false" />
+          <Property Name="schoolName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="manager" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="smsCount" Type="Int32" Nullable="false" />
+          <Property Name="Version" Type="Double" Nullable="false" />
+          <Property Name="teacherVersion" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="azmoonWebsite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Avrages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="idDesScore" Type="Int32" Nullable="false" />
+          <Property Name="Score" Type="Double" Nullable="false" />
+          <Property Name="idYear" Type="Int32" Nullable="false" />
+          <Property Name="idClass" Type="Int32" Nullable="false" />
+          <Property Name="idLesson" Type="Int32" Nullable="false" />
+          <Property Name="idStudent" Type="Int32" Nullable="false" />
         </EntityType>
         
         </Schema>
@@ -4812,19 +4876,6 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tbl_Setting">
-            <EntityTypeMapping TypeName="schoolModel.tbl_Setting">
-              <MappingFragment StoreEntitySet="tbl_Setting">
-                <ScalarProperty Name="Website" ColumnName="Website" />
-                <ScalarProperty Name="teacherVersion" ColumnName="teacherVersion" />
-                <ScalarProperty Name="Version" ColumnName="Version" />
-                <ScalarProperty Name="smsCount" ColumnName="smsCount" />
-                <ScalarProperty Name="manager" ColumnName="manager" />
-                <ScalarProperty Name="schoolName" ColumnName="schoolName" />
-                <ScalarProperty Name="idSetting" ColumnName="idSetting" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tbl_studentRegister">
             <EntityTypeMapping TypeName="schoolModel.tbl_studentRegister">
               <MappingFragment StoreEntitySet="tbl_studentRegister">
@@ -5237,6 +5288,10 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
           <EntitySetMapping Name="View_studentScore">
             <EntityTypeMapping TypeName="schoolModel.View_studentScore">
               <MappingFragment StoreEntitySet="View_studentScore">
+                <ScalarProperty Name="LName" ColumnName="LName" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="idLesson" ColumnName="idLesson" />
+                <ScalarProperty Name="numScore" ColumnName="numScore" />
                 <ScalarProperty Name="idExam" ColumnName="idExam" />
                 <ScalarProperty Name="desScore" ColumnName="desScore" />
                 <ScalarProperty Name="idYear" ColumnName="idYear" />
@@ -5249,6 +5304,43 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
                 <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="idStudent" ColumnName="idStudent" />
                 <ScalarProperty Name="idScore" ColumnName="idScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_SiteContent">
+            <EntityTypeMapping TypeName="schoolModel.tbl_SiteContent">
+              <MappingFragment StoreEntitySet="tbl_SiteContent">
+                <ScalarProperty Name="Tell2" ColumnName="Tell2" />
+                <ScalarProperty Name="Tell1" ColumnName="Tell1" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Setting">
+            <EntityTypeMapping TypeName="schoolModel.tbl_Setting">
+              <MappingFragment StoreEntitySet="tbl_Setting">
+                <ScalarProperty Name="azmoonWebsite" ColumnName="azmoonWebsite" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="teacherVersion" ColumnName="teacherVersion" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="smsCount" ColumnName="smsCount" />
+                <ScalarProperty Name="manager" ColumnName="manager" />
+                <ScalarProperty Name="schoolName" ColumnName="schoolName" />
+                <ScalarProperty Name="idSetting" ColumnName="idSetting" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Avrages">
+            <EntityTypeMapping TypeName="schoolModel.tbl_Avrages">
+              <MappingFragment StoreEntitySet="tbl_Avrages">
+                <ScalarProperty Name="idStudent" ColumnName="idStudent" />
+                <ScalarProperty Name="idLesson" ColumnName="idLesson" />
+                <ScalarProperty Name="idClass" ColumnName="idClass" />
+                <ScalarProperty Name="idYear" ColumnName="idYear" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="idDesScore" ColumnName="idDesScore" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
