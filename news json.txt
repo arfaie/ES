@@ -1,0 +1,23 @@
+{"images":["1","2"],"date":13970408,"receiverType":1,"title":"test","body":"test"}  //add news
+
+
+
+{"id":1,"images":["1","2"],"date":13970408,"receiverType":1,"visitCount":15,"title":"test2","body":"test2"}  //update news
+
+
+
+
+http://sahadschool.gsharing.ir/api/Management/referendum/addReferendum
+{"Q":"ÚäæÇä ÓæÇá","startDate":13970408,"endDate":13970420,"op1":"1","op2":"2","op3":"3","op4":"4"} //add referendum
+
+
+
+http://sahadschool.gsharing.ir/api/Management/referendum/update
+{"id":2,"Q":"ÓæÇá2","startDate":13970412,"endDate":13970429,"op1":"1","op2":"2","op3":"3","op4":"option4"} //update referendum
+
+
+
+
+http://sahadschool.gsharing.ir/api/Management/referendum/delete  (post)
+
+

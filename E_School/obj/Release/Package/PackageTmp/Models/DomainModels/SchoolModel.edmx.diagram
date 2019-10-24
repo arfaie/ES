@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="02b6dec873d44b30972b772ec76b5db7" Name="Diagram1" ZoomLevel="83" ShowGrid="true">
+        <EntityTypeShape EntityType="schoolModel.tbl_absentation" Width="1.5" PointX="8.25" PointY="14.375" />
+        <EntityTypeShape EntityType="schoolModel.tbl_Admin____" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_bells" Width="1.5" PointX="3.75" PointY="38.625" />
+        <EntityTypeShape EntityType="schoolModel.tbl_classes" Width="1.5" PointX="3.75" PointY="26.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_costs" Width="1.5" PointX="9" PointY="10.25" />
+        <EntityTypeShape EntityType="schoolModel.tbl_dataTable" Width="1.5" PointX="6" PointY="35" />
+        <EntityTypeShape EntityType="schoolModel.tbl_days" Width="1.5" PointX="3.75" PointY="41" />
+        <EntityTypeShape EntityType="schoolModel.tbl_debts" Width="1.5" PointX="11.25" PointY="19.375" />
+        <EntityTypeShape EntityType="schoolModel.tbl_descriptiveScores" Width="1.5" PointX="3" PointY="7.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_disciplineTypes" Width="1.5" PointX="9" PointY="30.625" />
+        <EntityTypeShape EntityType="schoolModel.tbl_editTransections" Width="1.5" PointX="10.5" PointY="27.375" />
+        <EntityTypeShape EntityType="schoolModel.tbl_educations" Width="1.5" PointX="0.75" PointY="23" />
+        <EntityTypeShape EntityType="schoolModel.tbl_examTypes" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="schoolModel.tbl_homeWorks" Width="1.5" PointX="6" PointY="29.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_lessons" Width="1.5" PointX="3.75" PointY="32.5" />
+        <EntityTypeShape EntityType="schoolModel.tbl_lessonTypes" Width="1.5" PointX="1.5" PointY="36.375" />
+        <EntityTypeShape EntityType="schoolModel.tbl_levels" Width="1.5" PointX="1.5" PointY="33.625" />
+        <EntityTypeShape EntityType="schoolModel.tbl_majors" Width="1.5" PointX="1.5" PointY="30.625" />
+        <EntityTypeShape EntityType="schoolModel.tbl_marriges" Width="1.5" PointX="0.75" PointY="16.625" />
+        <EntityTypeShape EntityType="schoolModel.tbl_messages" Width="1.5" PointX="8" PointY="1" />
+        <EntityTypeShape EntityType="schoolModel.tbl_msgTypes" Width="1.5" PointX="5.75" PointY="1.625" />
+        <EntityTypeShape EntityType="schoolModel.tbl_nowDate" Width="1.5" PointX="5.75" PointY="7.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_offices" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_payments" Width="1.5" PointX="8.25" PointY="18.25" />
+        <EntityTypeShape EntityType="schoolModel.tbl_payTypes" Width="1.5" PointX="6" PointY="26.875" />
+        <EntityTypeShape EntityType="schoolModel.tbl_receivedHomeWorks" Width="1.5" PointX="8.25" PointY="24.25" />
+        <EntityTypeShape EntityType="schoolModel.tbl_regCourseLists" Width="1.5" PointX="6" PointY="41.5" />
+        <EntityTypeShape EntityType="schoolModel.tbl_registrationCourses" Width="1.5" PointX="3" PointY="49.375" />
+        <EntityTypeShape EntityType="schoolModel.tbl_registrationList" Width="1.5" PointX="5.25" PointY="23.5" />
+        <EntityTypeShape EntityType="schoolModel.tbl_scores" Width="1.5" PointX="5.25" PointY="15.125" />
+        <EntityTypeShape EntityType="schoolModel.tbl_studentRegister" Width="1.5" PointX="5.25" PointY="18.875" />
+        <EntityTypeShape EntityType="schoolModel.tbl_studentsCosts" Width="1.5" PointX="11.25" PointY="15.375" />
+        <EntityTypeShape EntityType="schoolModel.tbl_studentsData" Width="1.5" PointX="5.25" PointY="11.125" />
+        <EntityTypeShape EntityType="schoolModel.tbl_studentsDisciplines" Width="1.5" PointX="11.25" PointY="23.125" />
+        <EntityTypeShape EntityType="schoolModel.tbl_studentStatus" Width="1.5" PointX="0.75" PointY="19.875" />
+        <EntityTypeShape EntityType="schoolModel.tbl_supporters" Width="1.5" PointX="11.75" PointY="7.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_teachers" Width="1.5" PointX="3.75" PointY="43.375" />
+        <EntityTypeShape EntityType="schoolModel.tbl_terms" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="schoolModel.tbl_Types" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_years" Width="1.5" PointX="3" PointY="10.875" />
+        <EntityTypeShape EntityType="schoolModel.View_absentation" Width="1.5" PointX="13.75" PointY="3.75" />
+        <EntityTypeShape EntityType="schoolModel.view_Classes" Width="1.5" PointX="13.75" PointY="7.75" />
+        <EntityTypeShape EntityType="schoolModel.View_classStudents" Width="1.5" PointX="13.75" PointY="11.75" />
+        <EntityTypeShape EntityType="schoolModel.View_discipline" Width="1.5" PointX="13.75" PointY="14.75" />
+        <EntityTypeShape EntityType="schoolModel.View_homeWork" Width="1.5" PointX="15.75" PointY="5.75" />
+        <EntityTypeShape EntityType="schoolModel.View_HomeWorkResponse" Width="1.5" PointX="15.75" PointY="10.75" />
+        <EntityTypeShape EntityType="schoolModel.view_Lesson" Width="1.5" PointX="15.75" PointY="14.75" />
+        <EntityTypeShape EntityType="schoolModel.View_StudentFinancial" Width="1.5" PointX="17.75" PointY="9.75" />
+        <EntityTypeShape EntityType="schoolModel.view_studentRegister" Width="1.5" PointX="13.75" PointY="18.75" />
+        <EntityTypeShape EntityType="schoolModel.View_studentScore" Width="1.5" PointX="19.75" PointY="0.75" />
+        <EntityTypeShape EntityType="schoolModel.view_Terms" Width="1.5" PointX="19.75" PointY="9.75" />
+        <AssociationConnector Association="schoolModel.FK_tbl_absentation_tbl_DataTable" />
+        <AssociationConnector Association="schoolModel.FK_tbl_DataTable_tbl_bells" />
+        <AssociationConnector Association="schoolModel.FK_tbl_DataTable_tbl_classes" />
+        <AssociationConnector Association="schoolModel.FK_tbl_homeWorks_tbl_classes" />
+        <AssociationConnector Association="schoolModel.FK_tbl_regCourseLists_tbl_classes" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentRegister_tbl_classes" />
+        <AssociationConnector Association="schoolModel.FK_tbl_costs_tbl_years" />
+        <AssociationConnector Association="schoolModel.FK_tbl_costs_tbl_years1" />
+        <AssociationConnector Association="schoolModel.FK_tbl_StudentsCosts_tbl_Costs" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentsCosts_tbl_costs1" />
+        <AssociationConnector Association="schoolModel.FK_tbl_DataTable_tbl_days" />
+        <AssociationConnector Association="schoolModel.FK_tbl_DataTable_tbl_lessons" />
+        <AssociationConnector Association="schoolModel.FK_tbl_DataTable_tbl_teachers" />
+        <AssociationConnector Association="schoolModel.FK_tbl_DataTable_tbl_teachers1" />
+        <AssociationConnector Association="schoolModel.FK_tbl_dataTable_tbl_years" />
+        <AssociationConnector Association="schoolModel.FK_tbl_debts_tbl_years" />
+        <AssociationConnector Association="schoolModel.FK_tbl_scores_tbl_descriptiveScores" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentsDisciplines_tbl_disciplineTypes" />
+        <AssociationConnector Association="schoolModel.FK_tbl_editTransections_tbl_payments" />
+        <AssociationConnector Association="schoolModel.FK_tbl_homeWorks_tbl_teachers" />
+        <AssociationConnector Association="schoolModel.FK_tbl_receivedHomeWork_tbl_homeWorks" />
+        <AssociationConnector Association="schoolModel.FK_tbl_lessons_tbl_lessonType" />
+        <AssociationConnector Association="schoolModel.FK_tbl_lessons_tbl_level" />
+        <AssociationConnector Association="schoolModel.FK_tbl_lessons_tbl_major" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentRegister_tbl_level" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentRegister_tbl_major" />
+        <AssociationConnector Association="schoolModel.FK_tbl_messages_tbl_msgTypes" />
+        <AssociationConnector Association="schoolModel.FK_tbl_payments_tbl_payTypes" />
+        <AssociationConnector Association="schoolModel.FK_tbl_payments_tbl_years" />
+        <AssociationConnector Association="schoolModel.FK_tbl_registrationList_tbl_registrationCourses" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentRegister_tbl_years" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentsEduData_tbl_years" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentsDisciplines_tbl_terms" />
+        <AssociationConnector Association="schoolModel.FK_tbl_terms_tbl_years" />
+        <EntityTypeShape EntityType="schoolModel.tbl_messageRecord" Width="1.5" PointX="10.25" PointY="0.75" />
+        <AssociationConnector Association="schoolModel.FK_tbl_classes_tbl_levels" />
+        <AssociationConnector Association="schoolModel.FK_tbl_classes_tbl_majors" />
+        <AssociationConnector Association="schoolModel.FK_tbl_classes_tbl_years" />
+        <AssociationConnector Association="schoolModel.FK_tbl_debts_tbl_costs" />
+        <AssociationConnector Association="schoolModel.FK_tbl_debts_tbl_registrationCourses" />
+        <AssociationConnector Association="schoolModel.FK_tbl_homeWorks_tbl_lessons" />
+        <AssociationConnector Association="schoolModel.FK_tbl_messageRecord_tbl_messages" />
+        <AssociationConnector Association="schoolModel.FK_tbl_messageRecord_tbl_years" />
+        <AssociationConnector Association="schoolModel.FK_tbl_regCourseLists_tbl_registrationCourses" />
+        <AssociationConnector Association="schoolModel.FK_tbl_registrationCourses_tbl_years" />
+        <EntityTypeShape EntityType="schoolModel.View_studentMessage" Width="1.5" PointX="16.375" PointY="18.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_exams" Width="1.5" PointX="13" PointY="26.625" />
+        <AssociationConnector Association="schoolModel.FK_tbl_exam_tbl_classes" />
+        <AssociationConnector Association="schoolModel.FK_tbl_exam_tbl_examType" />
+        <AssociationConnector Association="schoolModel.FK_tbl_exam_tbl_lessons" />
+        <AssociationConnector Association="schoolModel.FK_tbl_exams_tbl_teachers" />
+        <AssociationConnector Association="schoolModel.FK_tbl_exams_tbl_terms" />
+        <AssociationConnector Association="schoolModel.FK_tbl_scores_tbl_exams" />
+        <EntityTypeShape EntityType="schoolModel.View_studentInfo" Width="1.5" PointX="18.375" PointY="13.75" />
+        <EntityTypeShape EntityType="schoolModel.View_Exam" Width="1.5" PointX="16.375" PointY="0.75" />
+        <EntityTypeShape EntityType="schoolModel.View_teacherSchedule" Width="1.5" PointX="18.375" PointY="5.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_Setting" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_news" Width="1.5" PointX="18.375" PointY="17.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_images" Width="1.5" PointX="20.375" PointY="5.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_imageType" Width="1.5" PointX="20.375" PointY="13.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_referendums" Width="1.5" PointX="18.375" PointY="20.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_answers" Width="1.5" PointX="20.375" PointY="19.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_options" Width="1.5" PointX="20.375" PointY="16.75" />
+        <EntityTypeShape EntityType="schoolModel.tbl_students" Width="1.5" PointX="3" PointY="15.375" />
+        <AssociationConnector Association="schoolModel.FK_tbl_absentation_tbl_student" />
+        <AssociationConnector Association="schoolModel.FK_tbl_debts_tbl_students" />
+        <AssociationConnector Association="schoolModel.FK_tbl_student_tbl_education" />
+        <AssociationConnector Association="schoolModel.FK_tbl_student_tbl_marriges" />
+        <AssociationConnector Association="schoolModel.FK_tbl_payments_tbl_students" />
+        <AssociationConnector Association="schoolModel.FK_tbl_receivedHomeWork_tbl_student" />
+        <AssociationConnector Association="schoolModel.FK_tbl_registrationList_tbl_student" />
+        <AssociationConnector Association="schoolModel.FK_tbl_scores_tbl_students" />
+        <AssociationConnector Association="schoolModel.FK_tbl_scores_tbl_students1" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentRegister_tbl_student" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentRegister_tbl_students" />
+        <AssociationConnector Association="schoolModel.FK_tbl_student_tbl_studentStatus" />
+        <AssociationConnector Association="schoolModel.FK_tbl_StudentsCosts_tbl_student" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentsCosts_tbl_students" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentsDisciplines_tbl_student" />
+        <AssociationConnector Association="schoolModel.FK_tbl_studentsEduData_tbl_student" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

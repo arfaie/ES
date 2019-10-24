@@ -1,0 +1,2061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="schoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="schoolEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_absentation" EntityType="schoolModel.tbl_absentation" />
+    <EntitySet Name="tbl_Admin____" EntityType="schoolModel.tbl_Admin____" />
+    <EntitySet Name="tbl_bells" EntityType="schoolModel.tbl_bells" />
+    <EntitySet Name="tbl_classes" EntityType="schoolModel.tbl_classes" />
+    <EntitySet Name="tbl_costs" EntityType="schoolModel.tbl_costs" />
+    <EntitySet Name="tbl_dataTable" EntityType="schoolModel.tbl_dataTable" />
+    <EntitySet Name="tbl_days" EntityType="schoolModel.tbl_days" />
+    <EntitySet Name="tbl_debts" EntityType="schoolModel.tbl_debts" />
+    <EntitySet Name="tbl_descriptiveScores" EntityType="schoolModel.tbl_descriptiveScores" />
+    <EntitySet Name="tbl_disciplineTypes" EntityType="schoolModel.tbl_disciplineTypes" />
+    <EntitySet Name="tbl_editTransections" EntityType="schoolModel.tbl_editTransections" />
+    <EntitySet Name="tbl_educations" EntityType="schoolModel.tbl_educations" />
+    <EntitySet Name="tbl_examTypes" EntityType="schoolModel.tbl_examTypes" />
+    <EntitySet Name="tbl_homeWorks" EntityType="schoolModel.tbl_homeWorks" />
+    <EntitySet Name="tbl_lessons" EntityType="schoolModel.tbl_lessons" />
+    <EntitySet Name="tbl_lessonTypes" EntityType="schoolModel.tbl_lessonTypes" />
+    <EntitySet Name="tbl_levels" EntityType="schoolModel.tbl_levels" />
+    <EntitySet Name="tbl_majors" EntityType="schoolModel.tbl_majors" />
+    <EntitySet Name="tbl_marriges" EntityType="schoolModel.tbl_marriges" />
+    <EntitySet Name="tbl_messages" EntityType="schoolModel.tbl_messages" />
+    <EntitySet Name="tbl_msgTypes" EntityType="schoolModel.tbl_msgTypes" />
+    <EntitySet Name="tbl_nowDate" EntityType="schoolModel.tbl_nowDate" />
+    <EntitySet Name="tbl_offices" EntityType="schoolModel.tbl_offices" />
+    <EntitySet Name="tbl_payTypes" EntityType="schoolModel.tbl_payTypes" />
+    <EntitySet Name="tbl_receivedHomeWorks" EntityType="schoolModel.tbl_receivedHomeWorks" />
+    <EntitySet Name="tbl_regCourseLists" EntityType="schoolModel.tbl_regCourseLists" />
+    <EntitySet Name="tbl_registrationCourses" EntityType="schoolModel.tbl_registrationCourses" />
+    <EntitySet Name="tbl_registrationList" EntityType="schoolModel.tbl_registrationList" />
+    <EntitySet Name="tbl_scores" EntityType="schoolModel.tbl_scores" />
+    <EntitySet Name="tbl_studentRegister" EntityType="schoolModel.tbl_studentRegister" />
+    <EntitySet Name="tbl_studentsCosts" EntityType="schoolModel.tbl_studentsCosts" />
+    <EntitySet Name="tbl_studentsData" EntityType="schoolModel.tbl_studentsData" />
+    <EntitySet Name="tbl_studentsDisciplines" EntityType="schoolModel.tbl_studentsDisciplines" />
+    <EntitySet Name="tbl_studentStatus" EntityType="schoolModel.tbl_studentStatus" />
+    <EntitySet Name="tbl_supporters" EntityType="schoolModel.tbl_supporters" />
+    <EntitySet Name="tbl_teachers" EntityType="schoolModel.tbl_teachers" />
+    <EntitySet Name="tbl_terms" EntityType="schoolModel.tbl_terms" />
+    <EntitySet Name="tbl_Types" EntityType="schoolModel.tbl_Types" />
+    <EntitySet Name="tbl_years" EntityType="schoolModel.tbl_years" />
+    <EntitySet Name="View_absentation" EntityType="schoolModel.View_absentation" />
+    <EntitySet Name="view_Classes" EntityType="schoolModel.view_Classes" />
+    <EntitySet Name="View_classStudents" EntityType="schoolModel.View_classStudents" />
+    <EntitySet Name="View_discipline" EntityType="schoolModel.View_discipline" />
+    <EntitySet Name="View_homeWork" EntityType="schoolModel.View_homeWork" />
+    <EntitySet Name="View_HomeWorkResponse" EntityType="schoolModel.View_HomeWorkResponse" />
+    <EntitySet Name="view_Lesson" EntityType="schoolModel.view_Lesson" />
+    <EntitySet Name="View_StudentFinancial" EntityType="schoolModel.View_StudentFinancial" />
+    <EntitySet Name="view_studentRegister" EntityType="schoolModel.view_studentRegister" />
+    <EntitySet Name="View_studentScore" EntityType="schoolModel.View_studentScore" />
+    <EntitySet Name="view_Terms" EntityType="schoolModel.view_Terms" />
+    <AssociationSet Name="FK_tbl_absentation_tbl_DataTable" Association="schoolModel.FK_tbl_absentation_tbl_DataTable">
+      <End Role="tbl_dataTable" EntitySet="tbl_dataTable" />
+      <End Role="tbl_absentation" EntitySet="tbl_absentation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_DataTable_tbl_bells" Association="schoolModel.FK_tbl_DataTable_tbl_bells">
+      <End Role="tbl_bells" EntitySet="tbl_bells" />
+      <End Role="tbl_dataTable" EntitySet="tbl_dataTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_DataTable_tbl_classes" Association="schoolModel.FK_tbl_DataTable_tbl_classes">
+      <End Role="tbl_classes" EntitySet="tbl_classes" />
+      <End Role="tbl_dataTable" EntitySet="tbl_dataTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_homeWorks_tbl_classes" Association="schoolModel.FK_tbl_homeWorks_tbl_classes">
+      <End Role="tbl_classes" EntitySet="tbl_classes" />
+      <End Role="tbl_homeWorks" EntitySet="tbl_homeWorks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_regCourseLists_tbl_classes" Association="schoolModel.FK_tbl_regCourseLists_tbl_classes">
+      <End Role="tbl_classes" EntitySet="tbl_classes" />
+      <End Role="tbl_regCourseLists" EntitySet="tbl_regCourseLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentRegister_tbl_classes" Association="schoolModel.FK_tbl_studentRegister_tbl_classes">
+      <End Role="tbl_classes" EntitySet="tbl_classes" />
+      <End Role="tbl_studentRegister" EntitySet="tbl_studentRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_costs_tbl_years" Association="schoolModel.FK_tbl_costs_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_costs" EntitySet="tbl_costs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_costs_tbl_years1" Association="schoolModel.FK_tbl_costs_tbl_years1">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_costs" EntitySet="tbl_costs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_StudentsCosts_tbl_Costs" Association="schoolModel.FK_tbl_StudentsCosts_tbl_Costs">
+      <End Role="tbl_costs" EntitySet="tbl_costs" />
+      <End Role="tbl_studentsCosts" EntitySet="tbl_studentsCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentsCosts_tbl_costs1" Association="schoolModel.FK_tbl_studentsCosts_tbl_costs1">
+      <End Role="tbl_costs" EntitySet="tbl_costs" />
+      <End Role="tbl_studentsCosts" EntitySet="tbl_studentsCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_DataTable_tbl_days" Association="schoolModel.FK_tbl_DataTable_tbl_days">
+      <End Role="tbl_days" EntitySet="tbl_days" />
+      <End Role="tbl_dataTable" EntitySet="tbl_dataTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_DataTable_tbl_lessons" Association="schoolModel.FK_tbl_DataTable_tbl_lessons">
+      <End Role="tbl_lessons" EntitySet="tbl_lessons" />
+      <End Role="tbl_dataTable" EntitySet="tbl_dataTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_DataTable_tbl_teachers" Association="schoolModel.FK_tbl_DataTable_tbl_teachers">
+      <End Role="tbl_teachers" EntitySet="tbl_teachers" />
+      <End Role="tbl_dataTable" EntitySet="tbl_dataTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_DataTable_tbl_teachers1" Association="schoolModel.FK_tbl_DataTable_tbl_teachers1">
+      <End Role="tbl_teachers" EntitySet="tbl_teachers" />
+      <End Role="tbl_dataTable" EntitySet="tbl_dataTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_dataTable_tbl_years" Association="schoolModel.FK_tbl_dataTable_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_dataTable" EntitySet="tbl_dataTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_debts_tbl_years" Association="schoolModel.FK_tbl_debts_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_debts" EntitySet="tbl_debts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_scores_tbl_descriptiveScores" Association="schoolModel.FK_tbl_scores_tbl_descriptiveScores">
+      <End Role="tbl_descriptiveScores" EntitySet="tbl_descriptiveScores" />
+      <End Role="tbl_scores" EntitySet="tbl_scores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentsDisciplines_tbl_disciplineTypes" Association="schoolModel.FK_tbl_studentsDisciplines_tbl_disciplineTypes">
+      <End Role="tbl_disciplineTypes" EntitySet="tbl_disciplineTypes" />
+      <End Role="tbl_studentsDisciplines" EntitySet="tbl_studentsDisciplines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_homeWorks_tbl_teachers" Association="schoolModel.FK_tbl_homeWorks_tbl_teachers">
+      <End Role="tbl_teachers" EntitySet="tbl_teachers" />
+      <End Role="tbl_homeWorks" EntitySet="tbl_homeWorks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_receivedHomeWork_tbl_homeWorks" Association="schoolModel.FK_tbl_receivedHomeWork_tbl_homeWorks">
+      <End Role="tbl_homeWorks" EntitySet="tbl_homeWorks" />
+      <End Role="tbl_receivedHomeWorks" EntitySet="tbl_receivedHomeWorks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_lessons_tbl_lessonType" Association="schoolModel.FK_tbl_lessons_tbl_lessonType">
+      <End Role="tbl_lessonTypes" EntitySet="tbl_lessonTypes" />
+      <End Role="tbl_lessons" EntitySet="tbl_lessons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_lessons_tbl_level" Association="schoolModel.FK_tbl_lessons_tbl_level">
+      <End Role="tbl_levels" EntitySet="tbl_levels" />
+      <End Role="tbl_lessons" EntitySet="tbl_lessons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_lessons_tbl_major" Association="schoolModel.FK_tbl_lessons_tbl_major">
+      <End Role="tbl_majors" EntitySet="tbl_majors" />
+      <End Role="tbl_lessons" EntitySet="tbl_lessons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentRegister_tbl_level" Association="schoolModel.FK_tbl_studentRegister_tbl_level">
+      <End Role="tbl_levels" EntitySet="tbl_levels" />
+      <End Role="tbl_studentRegister" EntitySet="tbl_studentRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentRegister_tbl_major" Association="schoolModel.FK_tbl_studentRegister_tbl_major">
+      <End Role="tbl_majors" EntitySet="tbl_majors" />
+      <End Role="tbl_studentRegister" EntitySet="tbl_studentRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_messages_tbl_msgTypes" Association="schoolModel.FK_tbl_messages_tbl_msgTypes">
+      <End Role="tbl_msgTypes" EntitySet="tbl_msgTypes" />
+      <End Role="tbl_messages" EntitySet="tbl_messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_registrationList_tbl_registrationCourses" Association="schoolModel.FK_tbl_registrationList_tbl_registrationCourses">
+      <End Role="tbl_registrationCourses" EntitySet="tbl_registrationCourses" />
+      <End Role="tbl_registrationList" EntitySet="tbl_registrationList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentRegister_tbl_years" Association="schoolModel.FK_tbl_studentRegister_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_studentRegister" EntitySet="tbl_studentRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentsEduData_tbl_years" Association="schoolModel.FK_tbl_studentsEduData_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_studentsData" EntitySet="tbl_studentsData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentsDisciplines_tbl_terms" Association="schoolModel.FK_tbl_studentsDisciplines_tbl_terms">
+      <End Role="tbl_terms" EntitySet="tbl_terms" />
+      <End Role="tbl_studentsDisciplines" EntitySet="tbl_studentsDisciplines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_terms_tbl_years" Association="schoolModel.FK_tbl_terms_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_terms" EntitySet="tbl_terms" />
+    </AssociationSet>
+    <EntitySet Name="tbl_messageRecord" EntityType="schoolModel.tbl_messageRecord" />
+    <AssociationSet Name="FK_tbl_classes_tbl_levels" Association="schoolModel.FK_tbl_classes_tbl_levels">
+      <End Role="tbl_levels" EntitySet="tbl_levels" />
+      <End Role="tbl_classes" EntitySet="tbl_classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_classes_tbl_majors" Association="schoolModel.FK_tbl_classes_tbl_majors">
+      <End Role="tbl_majors" EntitySet="tbl_majors" />
+      <End Role="tbl_classes" EntitySet="tbl_classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_classes_tbl_years" Association="schoolModel.FK_tbl_classes_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_classes" EntitySet="tbl_classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_debts_tbl_costs" Association="schoolModel.FK_tbl_debts_tbl_costs">
+      <End Role="tbl_costs" EntitySet="tbl_costs" />
+      <End Role="tbl_debts" EntitySet="tbl_debts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_debts_tbl_registrationCourses" Association="schoolModel.FK_tbl_debts_tbl_registrationCourses">
+      <End Role="tbl_registrationCourses" EntitySet="tbl_registrationCourses" />
+      <End Role="tbl_debts" EntitySet="tbl_debts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_homeWorks_tbl_lessons" Association="schoolModel.FK_tbl_homeWorks_tbl_lessons">
+      <End Role="tbl_lessons" EntitySet="tbl_lessons" />
+      <End Role="tbl_homeWorks" EntitySet="tbl_homeWorks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_messageRecord_tbl_messages" Association="schoolModel.FK_tbl_messageRecord_tbl_messages">
+      <End Role="tbl_messages" EntitySet="tbl_messages" />
+      <End Role="tbl_messageRecord" EntitySet="tbl_messageRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_messageRecord_tbl_years" Association="schoolModel.FK_tbl_messageRecord_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_messageRecord" EntitySet="tbl_messageRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_regCourseLists_tbl_registrationCourses" Association="schoolModel.FK_tbl_regCourseLists_tbl_registrationCourses">
+      <End Role="tbl_registrationCourses" EntitySet="tbl_registrationCourses" />
+      <End Role="tbl_regCourseLists" EntitySet="tbl_regCourseLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_registrationCourses_tbl_years" Association="schoolModel.FK_tbl_registrationCourses_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_registrationCourses" EntitySet="tbl_registrationCourses" />
+    </AssociationSet>
+    <EntitySet Name="View_studentMessage" EntityType="schoolModel.View_studentMessage" />
+    <EntitySet Name="tbl_exams" EntityType="schoolModel.tbl_exams" />
+    <AssociationSet Name="FK_tbl_exam_tbl_classes" Association="schoolModel.FK_tbl_exam_tbl_classes">
+      <End Role="tbl_classes" EntitySet="tbl_classes" />
+      <End Role="tbl_exams" EntitySet="tbl_exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_exam_tbl_examType" Association="schoolModel.FK_tbl_exam_tbl_examType">
+      <End Role="tbl_examTypes" EntitySet="tbl_examTypes" />
+      <End Role="tbl_exams" EntitySet="tbl_exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_exam_tbl_lessons" Association="schoolModel.FK_tbl_exam_tbl_lessons">
+      <End Role="tbl_lessons" EntitySet="tbl_lessons" />
+      <End Role="tbl_exams" EntitySet="tbl_exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_exams_tbl_teachers" Association="schoolModel.FK_tbl_exams_tbl_teachers">
+      <End Role="tbl_teachers" EntitySet="tbl_teachers" />
+      <End Role="tbl_exams" EntitySet="tbl_exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_exams_tbl_terms" Association="schoolModel.FK_tbl_exams_tbl_terms">
+      <End Role="tbl_terms" EntitySet="tbl_terms" />
+      <End Role="tbl_exams" EntitySet="tbl_exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_scores_tbl_exams" Association="schoolModel.FK_tbl_scores_tbl_exams">
+      <End Role="tbl_exams" EntitySet="tbl_exams" />
+      <End Role="tbl_scores" EntitySet="tbl_scores" />
+    </AssociationSet>
+    <EntitySet Name="View_studentInfo" EntityType="schoolModel.View_studentInfo" />
+    <EntitySet Name="View_Exam" EntityType="schoolModel.View_Exam" />
+    <EntitySet Name="View_teacherSchedule" EntityType="schoolModel.View_teacherSchedule" />
+    <EntitySet Name="tbl_Setting" EntityType="schoolModel.tbl_Setting" />
+    <EntitySet Name="tbl_news" EntityType="schoolModel.tbl_news" />
+    <EntitySet Name="tbl_images" EntityType="schoolModel.tbl_images" />
+    <EntitySet Name="tbl_imageType" EntityType="schoolModel.tbl_imageType" />
+    <EntitySet Name="tbl_referendums" EntityType="schoolModel.tbl_referendums" />
+    <EntitySet Name="tbl_answers" EntityType="schoolModel.tbl_answers" />
+    <EntitySet Name="tbl_options" EntityType="schoolModel.tbl_options" />
+    <EntitySet Name="tbl_students" EntityType="schoolModel.tbl_students" />
+    <AssociationSet Name="FK_tbl_absentation_tbl_student" Association="schoolModel.FK_tbl_absentation_tbl_student">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_absentation" EntitySet="tbl_absentation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_debts_tbl_students" Association="schoolModel.FK_tbl_debts_tbl_students">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_debts" EntitySet="tbl_debts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_student_tbl_education" Association="schoolModel.FK_tbl_student_tbl_education">
+      <End Role="tbl_educations" EntitySet="tbl_educations" />
+      <End Role="tbl_students" EntitySet="tbl_students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_student_tbl_marriges" Association="schoolModel.FK_tbl_student_tbl_marriges">
+      <End Role="tbl_marriges" EntitySet="tbl_marriges" />
+      <End Role="tbl_students" EntitySet="tbl_students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_receivedHomeWork_tbl_student" Association="schoolModel.FK_tbl_receivedHomeWork_tbl_student">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_receivedHomeWorks" EntitySet="tbl_receivedHomeWorks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_registrationList_tbl_student" Association="schoolModel.FK_tbl_registrationList_tbl_student">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_registrationList" EntitySet="tbl_registrationList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_scores_tbl_students" Association="schoolModel.FK_tbl_scores_tbl_students">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_scores" EntitySet="tbl_scores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_scores_tbl_students1" Association="schoolModel.FK_tbl_scores_tbl_students1">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_scores" EntitySet="tbl_scores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentRegister_tbl_student" Association="schoolModel.FK_tbl_studentRegister_tbl_student">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_studentRegister" EntitySet="tbl_studentRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentRegister_tbl_students" Association="schoolModel.FK_tbl_studentRegister_tbl_students">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_studentRegister" EntitySet="tbl_studentRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_student_tbl_studentStatus" Association="schoolModel.FK_tbl_student_tbl_studentStatus">
+      <End Role="tbl_studentStatus" EntitySet="tbl_studentStatus" />
+      <End Role="tbl_students" EntitySet="tbl_students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_StudentsCosts_tbl_student" Association="schoolModel.FK_tbl_StudentsCosts_tbl_student">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_studentsCosts" EntitySet="tbl_studentsCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentsCosts_tbl_students" Association="schoolModel.FK_tbl_studentsCosts_tbl_students">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_studentsCosts" EntitySet="tbl_studentsCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentsDisciplines_tbl_student" Association="schoolModel.FK_tbl_studentsDisciplines_tbl_student">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_studentsDisciplines" EntitySet="tbl_studentsDisciplines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_studentsEduData_tbl_student" Association="schoolModel.FK_tbl_studentsEduData_tbl_student">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_studentsData" EntitySet="tbl_studentsData" />
+    </AssociationSet>
+    <EntitySet Name="tbl_payments" EntityType="schoolModel.tbl_payments" />
+    <AssociationSet Name="FK_tbl_editTransections_tbl_payments" Association="schoolModel.FK_tbl_editTransections_tbl_payments">
+      <End Role="tbl_payments" EntitySet="tbl_payments" />
+      <End Role="tbl_editTransections" EntitySet="tbl_editTransections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_payments_tbl_payTypes" Association="schoolModel.FK_tbl_payments_tbl_payTypes">
+      <End Role="tbl_payTypes" EntitySet="tbl_payTypes" />
+      <End Role="tbl_payments" EntitySet="tbl_payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_payments_tbl_students" Association="schoolModel.FK_tbl_payments_tbl_students">
+      <End Role="tbl_students" EntitySet="tbl_students" />
+      <End Role="tbl_payments" EntitySet="tbl_payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_payments_tbl_years" Association="schoolModel.FK_tbl_payments_tbl_years">
+      <End Role="tbl_years" EntitySet="tbl_years" />
+      <End Role="tbl_payments" EntitySet="tbl_payments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbl_absentation">
+    <Key>
+      <PropertyRef Name="idAbsentation" />
+    </Key>
+    <Property Name="idAbsentation" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="idDataTable" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="date" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Admin____">
+    <Key>
+      <PropertyRef Name="idAdmin" />
+    </Key>
+    <Property Name="idAdmin" Type="Int32" Nullable="false" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_bells">
+    <Key>
+      <PropertyRef Name="idBells" />
+    </Key>
+    <Property Name="idBells" Type="Int32" Nullable="false" />
+    <Property Name="BellName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_classes">
+    <Key>
+      <PropertyRef Name="idClass" />
+    </Key>
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="className" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="classCapacity" Type="Int32" />
+    <Property Name="idLevel" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="idMajor" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_costs">
+    <Key>
+      <PropertyRef Name="idCost" />
+    </Key>
+    <Property Name="idCost" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="Int32" Nullable="false" />
+    <Property Name="Des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_dataTable">
+    <Key>
+      <PropertyRef Name="idDataTable" />
+    </Key>
+    <Property Name="idDataTable" Type="Int32" Nullable="false" />
+    <Property Name="idDay" Type="Int32" Nullable="false" />
+    <Property Name="idBell" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="idLesson" Type="Int32" Nullable="false" />
+    <Property Name="idTeacher" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="bellStart" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="bellEnd" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="isTak" Type="Boolean" />
+    <Property Name="idTeacher2" Type="Int32" />
+    <Property Name="idLesson2" Type="Int32" />
+    <Property Name="takStart" Type="Time" Precision="7" />
+    <Property Name="takEnd" Type="Time" Precision="7" />
+  </EntityType>
+  <EntityType Name="tbl_days">
+    <Key>
+      <PropertyRef Name="idDay" />
+    </Key>
+    <Property Name="idDay" Type="Int32" Nullable="false" />
+    <Property Name="dayName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_debts">
+    <Key>
+      <PropertyRef Name="idDebt" />
+    </Key>
+    <Property Name="idDebt" Type="Int32" Nullable="false" />
+    <Property Name="idStud" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="idCost" Type="Int32" />
+    <Property Name="idRegCourse" Type="Int32" />
+    <Property Name="Date" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_descriptiveScores">
+    <Key>
+      <PropertyRef Name="idDescriptiveScore" />
+    </Key>
+    <Property Name="idDescriptiveScore" Type="Int32" Nullable="false" />
+    <Property Name="numScore" Type="Int32" />
+    <Property Name="desScore" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_disciplineTypes">
+    <Key>
+      <PropertyRef Name="idDisType" />
+    </Key>
+    <Property Name="idDisType" Type="Int32" Nullable="false" />
+    <Property Name="disName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="action" Type="Boolean" Nullable="false" />
+    <Property Name="value" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_editTransections">
+    <Key>
+      <PropertyRef Name="idTrans" />
+    </Key>
+    <Property Name="idTrans" Type="Int32" Nullable="false" />
+    <Property Name="idPayment" Type="Int32" Nullable="false" />
+    <Property Name="value" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="Int32" Nullable="false" />
+    <Property Name="isOrg" Type="Boolean" Nullable="false" />
+    <Property Name="Des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_payments" Relationship="schoolModel.FK_tbl_editTransections_tbl_payments" FromRole="tbl_editTransections" ToRole="tbl_payments" />
+  </EntityType>
+  <EntityType Name="tbl_educations">
+    <Key>
+      <PropertyRef Name="idEdu" />
+    </Key>
+    <Property Name="idEdu" Type="Int32" Nullable="false" />
+    <Property Name="eduName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_examTypes">
+    <Key>
+      <PropertyRef Name="idExamType" />
+    </Key>
+    <Property Name="idExamType" Type="Int32" Nullable="false" />
+    <Property Name="examType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_homeWorks">
+    <Key>
+      <PropertyRef Name="idHomeWork" />
+    </Key>
+    <Property Name="idHomeWork" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="idLesson" Type="Int32" Nullable="false" />
+    <Property Name="idTeacher" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HomeWorkFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answerBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answerFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="exDateTime" Type="Int32" Nullable="false" />
+    <Property Name="UploadDate" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_lessons">
+    <Key>
+      <PropertyRef Name="idLesson" />
+    </Key>
+    <Property Name="idLesson" Type="Int32" Nullable="false" />
+    <Property Name="lessonName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idLevel" Type="Int32" Nullable="false" />
+    <Property Name="idMajor" Type="Int32" Nullable="false" />
+    <Property Name="idLessonType" Type="Int32" Nullable="false" />
+    <Property Name="theoryUnitCounts" Type="Int32" />
+    <Property Name="practicalUnitCounts" Type="Int32" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_lessonTypes">
+    <Key>
+      <PropertyRef Name="idLessonType" />
+    </Key>
+    <Property Name="idLessonType" Type="Int32" Nullable="false" />
+    <Property Name="nameLessonType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_levels">
+    <Key>
+      <PropertyRef Name="idLevel" />
+    </Key>
+    <Property Name="idLevel" Type="Int32" Nullable="false" />
+    <Property Name="levelName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idParent" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_majors">
+    <Key>
+      <PropertyRef Name="idMajor" />
+    </Key>
+    <Property Name="idMajor" Type="Int32" Nullable="false" />
+    <Property Name="unitCount" Type="Int32" />
+    <Property Name="majorCode" Type="Int32" />
+    <Property Name="majorName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_marriges">
+    <Key>
+      <PropertyRef Name="idMarrige" />
+    </Key>
+    <Property Name="idMarrige" Type="Int32" Nullable="false" />
+    <Property Name="marrigeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_messages">
+    <Key>
+      <PropertyRef Name="idMessage" />
+    </Key>
+    <Property Name="idMessage" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="body" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="Int32" Nullable="false" />
+    <Property Name="idMessageType" Type="Int16" Nullable="false" />
+    <Property Name="idReceiverType" Type="Int32" Nullable="false" />
+    <Property Name="idSenderType" Type="Int32" Nullable="false" />
+    <Property Name="idSender" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_msgTypes">
+    <Key>
+      <PropertyRef Name="idMsgType" />
+    </Key>
+    <Property Name="idMsgType" Type="Int16" Nullable="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_nowDate">
+    <Key>
+      <PropertyRef Name="idNowDate" />
+    </Key>
+    <Property Name="idNowDate" Type="Int16" Nullable="false" />
+    <Property Name="shamsiDate" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="miladiDate" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_offices">
+    <Key>
+      <PropertyRef Name="idOffices" />
+    </Key>
+    <Property Name="idOffices" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="personalCode" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fatherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="Boolean" Nullable="false" />
+    <Property Name="birthDate" Type="Int32" Nullable="false" />
+    <Property Name="natCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="imgManifest" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="imgPersonal" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="mobile" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_payTypes">
+    <Key>
+      <PropertyRef Name="idPayType" />
+    </Key>
+    <Property Name="idPayType" Type="Int16" Nullable="false" />
+    <Property Name="payType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_receivedHomeWorks">
+    <Key>
+      <PropertyRef Name="idRecHomeWork" />
+    </Key>
+    <Property Name="idRecHomeWork" Type="Int32" Nullable="false" />
+    <Property Name="idHomeWork" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="answerFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answerBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="score" Type="Double" />
+    <Property Name="dateTime" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_regCourseLists">
+    <Key>
+      <PropertyRef Name="idRegCourseList" />
+    </Key>
+    <Property Name="idRegCourseList" Type="Int32" Nullable="false" />
+    <Property Name="idRegCourse" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_registrationCourses">
+    <Key>
+      <PropertyRef Name="idRegcourse" />
+    </Key>
+    <Property Name="idRegcourse" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="value" Type="Int32" Nullable="false" />
+    <Property Name="startDateTime" Type="Int32" Nullable="false" />
+    <Property Name="endDateTime" Type="Int32" Nullable="false" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_registrationList">
+    <Key>
+      <PropertyRef Name="idRegList" />
+    </Key>
+    <Property Name="idRegList" Type="Int32" Nullable="false" />
+    <Property Name="idRegcourse" Type="Int32" />
+    <Property Name="idPayed" Type="Int32" />
+    <Property Name="idStudent" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_scores">
+    <Key>
+      <PropertyRef Name="idScore" />
+    </Key>
+    <Property Name="idScore" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="idExam" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="Int32" Nullable="false" />
+    <Property Name="idDescriptiveScore" Type="Int32" Nullable="false" />
+    <Property Name="score" Type="Double" Nullable="false" />
+    <Property Name="des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_studentRegister">
+    <Key>
+      <PropertyRef Name="idStudReg" />
+    </Key>
+    <Property Name="idStudReg" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="idMajor" Type="Int32" Nullable="false" />
+    <Property Name="idLevel" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="registerStatus" Type="Boolean" Nullable="false" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_studentsCosts">
+    <Key>
+      <PropertyRef Name="idStudCost" />
+    </Key>
+    <Property Name="idStudCost" Type="Int32" Nullable="false" />
+    <Property Name="idCost" Type="Int32" Nullable="false" />
+    <Property Name="idStud" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_studentsData">
+    <Key>
+      <PropertyRef Name="idStudData" />
+    </Key>
+    <Property Name="idStudData" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="idType" Type="Int16" Nullable="false" />
+    <Property Name="dataTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dataDate" Type="Int32" />
+    <Property Name="dataFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_studentsDisciplines">
+    <Key>
+      <PropertyRef Name="idStudentDisciplines" />
+    </Key>
+    <Property Name="idStudentDisciplines" Type="Int32" Nullable="false" />
+    <Property Name="idDisType" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="actDate" Type="Int32" Nullable="false" />
+    <Property Name="idTerm" Type="Int32" Nullable="false" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="justified" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_studentStatus">
+    <Key>
+      <PropertyRef Name="idStatus" />
+    </Key>
+    <Property Name="idStatus" Type="Int32" Nullable="false" />
+    <Property Name="statusName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_supporters">
+    <Key>
+      <PropertyRef Name="idSupporter" />
+    </Key>
+    <Property Name="idSupporter" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="personalCode" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fatherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="Boolean" Nullable="false" />
+    <Property Name="birthDate" Type="Int32" Nullable="false" />
+    <Property Name="natCode" Type="Int32" Nullable="false" />
+    <Property Name="imgManifest" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="imgPersonal" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="mobile" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="teacherUser" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="teacherPass" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_teachers">
+    <Key>
+      <PropertyRef Name="idTeacher" />
+    </Key>
+    <Property Name="idTeacher" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="personalCode" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fatherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="Boolean" Nullable="false" />
+    <Property Name="birthDate" Type="Int32" Nullable="false" />
+    <Property Name="natCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="imgManifest" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="imgPersonal" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="mobile" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="teacherUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="teacherPass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_terms">
+    <Key>
+      <PropertyRef Name="idTerm" />
+    </Key>
+    <Property Name="idTerm" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="termName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="termStart" Type="Int32" />
+    <Property Name="termEnd" Type="Int32" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Types">
+    <Key>
+      <PropertyRef Name="idType" />
+    </Key>
+    <Property Name="idType" Type="Int16" Nullable="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_years">
+    <Key>
+      <PropertyRef Name="idYear" />
+    </Key>
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="yearName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yearStart" Type="Int32" />
+    <Property Name="yearEnd" Type="Int32" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_payments" Relationship="schoolModel.FK_tbl_payments_tbl_years" FromRole="tbl_years" ToRole="tbl_payments" />
+  </EntityType>
+  <EntityType Name="View_absentation">
+    <Key>
+      <PropertyRef Name="idAbsentation" />
+      <PropertyRef Name="idStudent" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="date" />
+      <PropertyRef Name="idClass" />
+      <PropertyRef Name="FName" />
+      <PropertyRef Name="LName" />
+      <PropertyRef Name="idDataTable" />
+    </Key>
+    <Property Name="idAbsentation" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="date" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idDataTable" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="view_Classes">
+    <Key>
+      <PropertyRef Name="className" />
+      <PropertyRef Name="levelName" />
+      <PropertyRef Name="majorName" />
+      <PropertyRef Name="yearName" />
+      <PropertyRef Name="idClass" />
+      <PropertyRef Name="idLevel" />
+      <PropertyRef Name="idMajor" />
+      <PropertyRef Name="idYear" />
+    </Key>
+    <Property Name="className" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="classCapacity" Type="Int32" />
+    <Property Name="levelName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="majorName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yearName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="idLevel" Type="Int32" Nullable="false" />
+    <Property Name="idMajor" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_classStudents">
+    <Key>
+      <PropertyRef Name="idClass" />
+      <PropertyRef Name="idStudent" />
+      <PropertyRef Name="FName" />
+      <PropertyRef Name="LName" />
+      <PropertyRef Name="idYear" />
+    </Key>
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_discipline">
+    <Key>
+      <PropertyRef Name="idStudentDisciplines" />
+      <PropertyRef Name="disName" />
+      <PropertyRef Name="idStudent" />
+      <PropertyRef Name="idClass" />
+      <PropertyRef Name="actDate" />
+      <PropertyRef Name="FName" />
+      <PropertyRef Name="LName" />
+      <PropertyRef Name="idYear" />
+      <PropertyRef Name="idTerm" />
+    </Key>
+    <Property Name="idStudentDisciplines" Type="Int32" Nullable="false" />
+    <Property Name="disName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="actDate" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="idTerm" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_homeWork">
+    <Key>
+      <PropertyRef Name="idClass" />
+      <PropertyRef Name="className" />
+      <PropertyRef Name="idHomeWork" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="exDateTime" />
+      <PropertyRef Name="UploadDate" />
+      <PropertyRef Name="idYear" />
+      <PropertyRef Name="idTeacher" />
+      <PropertyRef Name="idLesson" />
+      <PropertyRef Name="FName" />
+      <PropertyRef Name="LName" />
+    </Key>
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="className" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idHomeWork" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HomeWorkFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answerBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answerFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="exDateTime" Type="Int32" Nullable="false" />
+    <Property Name="UploadDate" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="idTeacher" Type="Int32" Nullable="false" />
+    <Property Name="idLesson" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_HomeWorkResponse">
+    <Key>
+      <PropertyRef Name="idRecHomeWork" />
+      <PropertyRef Name="idHomeWork" />
+      <PropertyRef Name="FName" />
+      <PropertyRef Name="LName" />
+      <PropertyRef Name="dateTime" />
+      <PropertyRef Name="idStudent" />
+    </Key>
+    <Property Name="idRecHomeWork" Type="Int32" Nullable="false" />
+    <Property Name="idHomeWork" Type="Int32" Nullable="false" />
+    <Property Name="answerFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="score" Type="Double" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dateTime" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="answerBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="view_Lesson">
+    <Key>
+      <PropertyRef Name="lessonName" />
+      <PropertyRef Name="idLesson" />
+      <PropertyRef Name="nameLessonType" />
+      <PropertyRef Name="levelName" />
+      <PropertyRef Name="idMajor" />
+      <PropertyRef Name="idLevel" />
+      <PropertyRef Name="idLessonType" />
+    </Key>
+    <Property Name="lessonName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idLesson" Type="Int32" Nullable="false" />
+    <Property Name="theoryUnitCounts" Type="Int32" />
+    <Property Name="practicalUnitCounts" Type="Int32" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nameLessonType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="levelName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="majorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idMajor" Type="Int32" Nullable="false" />
+    <Property Name="idLevel" Type="Int32" Nullable="false" />
+    <Property Name="idLessonType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_StudentFinancial">
+    <Key>
+      <PropertyRef Name="idDebt" />
+      <PropertyRef Name="idStud" />
+      <PropertyRef Name="idYear" />
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Value" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="Expr1" />
+    </Key>
+    <Property Name="idDebt" Type="Int32" Nullable="false" />
+    <Property Name="idStud" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="idCost" Type="Int32" />
+    <Property Name="idRegCourse" Type="Int32" />
+    <Property Name="Date" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="view_studentRegister">
+    <Key>
+      <PropertyRef Name="idStudReg" />
+      <PropertyRef Name="idStudent" />
+      <PropertyRef Name="idMajor" />
+      <PropertyRef Name="idLevel" />
+      <PropertyRef Name="idClass" />
+      <PropertyRef Name="registerStatus" />
+      <PropertyRef Name="FName" />
+      <PropertyRef Name="LName" />
+      <PropertyRef Name="majorName" />
+      <PropertyRef Name="levelName" />
+      <PropertyRef Name="className" />
+      <PropertyRef Name="yearName" />
+      <PropertyRef Name="idYear" />
+    </Key>
+    <Property Name="idStudReg" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="idMajor" Type="Int32" Nullable="false" />
+    <Property Name="idLevel" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="registerStatus" Type="Boolean" Nullable="false" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="majorName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="levelName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="className" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="imgPersonal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="yearName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_studentScore">
+    <Key>
+      <PropertyRef Name="idScore" />
+      <PropertyRef Name="idStudent" />
+      <PropertyRef Name="date" />
+      <PropertyRef Name="score" />
+      <PropertyRef Name="idDescriptiveScore" />
+      <PropertyRef Name="lessonName" />
+      <PropertyRef Name="examType" />
+      <PropertyRef Name="idYear" />
+      <PropertyRef Name="idExam" />
+    </Key>
+    <Property Name="idScore" Type="Int32" Nullable="false" />
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="Int32" Nullable="false" />
+    <Property Name="score" Type="Double" Nullable="false" />
+    <Property Name="idDescriptiveScore" Type="Int32" Nullable="false" />
+    <Property Name="lessonName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="maxScore" Type="Int32" />
+    <Property Name="examType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="desScore" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idExam" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="view_Terms">
+    <Key>
+      <PropertyRef Name="idTerm" />
+      <PropertyRef Name="idYear" />
+      <PropertyRef Name="termName" />
+      <PropertyRef Name="yearName" />
+    </Key>
+    <Property Name="idTerm" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="termName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="termStart" Type="Int32" />
+    <Property Name="termEnd" Type="Int32" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yearName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_tbl_absentation_tbl_DataTable">
+    <End Type="schoolModel.tbl_dataTable" Role="tbl_dataTable" Multiplicity="1" />
+    <End Type="schoolModel.tbl_absentation" Role="tbl_absentation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_dataTable">
+        <PropertyRef Name="idDataTable" />
+      </Principal>
+      <Dependent Role="tbl_absentation">
+        <PropertyRef Name="idDataTable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_DataTable_tbl_bells">
+    <End Type="schoolModel.tbl_bells" Role="tbl_bells" Multiplicity="1" />
+    <End Type="schoolModel.tbl_dataTable" Role="tbl_dataTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_bells">
+        <PropertyRef Name="idBells" />
+      </Principal>
+      <Dependent Role="tbl_dataTable">
+        <PropertyRef Name="idBell" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_DataTable_tbl_classes">
+    <End Type="schoolModel.tbl_classes" Role="tbl_classes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_dataTable" Role="tbl_dataTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_classes">
+        <PropertyRef Name="idClass" />
+      </Principal>
+      <Dependent Role="tbl_dataTable">
+        <PropertyRef Name="idClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_homeWorks_tbl_classes">
+    <End Type="schoolModel.tbl_classes" Role="tbl_classes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_homeWorks" Role="tbl_homeWorks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_classes">
+        <PropertyRef Name="idClass" />
+      </Principal>
+      <Dependent Role="tbl_homeWorks">
+        <PropertyRef Name="idClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_regCourseLists_tbl_classes">
+    <End Type="schoolModel.tbl_classes" Role="tbl_classes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_regCourseLists" Role="tbl_regCourseLists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_classes">
+        <PropertyRef Name="idClass" />
+      </Principal>
+      <Dependent Role="tbl_regCourseLists">
+        <PropertyRef Name="idClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentRegister_tbl_classes">
+    <End Type="schoolModel.tbl_classes" Role="tbl_classes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentRegister" Role="tbl_studentRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_classes">
+        <PropertyRef Name="idClass" />
+      </Principal>
+      <Dependent Role="tbl_studentRegister">
+        <PropertyRef Name="idClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_costs_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_costs" Role="tbl_costs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_costs">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_costs_tbl_years1">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_costs" Role="tbl_costs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_costs">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_StudentsCosts_tbl_Costs">
+    <End Type="schoolModel.tbl_costs" Role="tbl_costs" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentsCosts" Role="tbl_studentsCosts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_costs">
+        <PropertyRef Name="idCost" />
+      </Principal>
+      <Dependent Role="tbl_studentsCosts">
+        <PropertyRef Name="idCost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentsCosts_tbl_costs1">
+    <End Type="schoolModel.tbl_costs" Role="tbl_costs" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentsCosts" Role="tbl_studentsCosts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_costs">
+        <PropertyRef Name="idCost" />
+      </Principal>
+      <Dependent Role="tbl_studentsCosts">
+        <PropertyRef Name="idCost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_DataTable_tbl_days">
+    <End Type="schoolModel.tbl_days" Role="tbl_days" Multiplicity="1" />
+    <End Type="schoolModel.tbl_dataTable" Role="tbl_dataTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_days">
+        <PropertyRef Name="idDay" />
+      </Principal>
+      <Dependent Role="tbl_dataTable">
+        <PropertyRef Name="idDay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_DataTable_tbl_lessons">
+    <End Type="schoolModel.tbl_lessons" Role="tbl_lessons" Multiplicity="1" />
+    <End Type="schoolModel.tbl_dataTable" Role="tbl_dataTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_lessons">
+        <PropertyRef Name="idLesson" />
+      </Principal>
+      <Dependent Role="tbl_dataTable">
+        <PropertyRef Name="idLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_DataTable_tbl_teachers">
+    <End Type="schoolModel.tbl_teachers" Role="tbl_teachers" Multiplicity="1" />
+    <End Type="schoolModel.tbl_dataTable" Role="tbl_dataTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_teachers">
+        <PropertyRef Name="idTeacher" />
+      </Principal>
+      <Dependent Role="tbl_dataTable">
+        <PropertyRef Name="idTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_DataTable_tbl_teachers1">
+    <End Type="schoolModel.tbl_teachers" Role="tbl_teachers" Multiplicity="0..1" />
+    <End Type="schoolModel.tbl_dataTable" Role="tbl_dataTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_teachers">
+        <PropertyRef Name="idTeacher" />
+      </Principal>
+      <Dependent Role="tbl_dataTable">
+        <PropertyRef Name="idTeacher2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_dataTable_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_dataTable" Role="tbl_dataTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_dataTable">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_debts_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_debts" Role="tbl_debts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_debts">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_scores_tbl_descriptiveScores">
+    <End Type="schoolModel.tbl_descriptiveScores" Role="tbl_descriptiveScores" Multiplicity="1" />
+    <End Type="schoolModel.tbl_scores" Role="tbl_scores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_descriptiveScores">
+        <PropertyRef Name="idDescriptiveScore" />
+      </Principal>
+      <Dependent Role="tbl_scores">
+        <PropertyRef Name="idDescriptiveScore" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentsDisciplines_tbl_disciplineTypes">
+    <End Type="schoolModel.tbl_disciplineTypes" Role="tbl_disciplineTypes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentsDisciplines" Role="tbl_studentsDisciplines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_disciplineTypes">
+        <PropertyRef Name="idDisType" />
+      </Principal>
+      <Dependent Role="tbl_studentsDisciplines">
+        <PropertyRef Name="idDisType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_homeWorks_tbl_teachers">
+    <End Type="schoolModel.tbl_teachers" Role="tbl_teachers" Multiplicity="1" />
+    <End Type="schoolModel.tbl_homeWorks" Role="tbl_homeWorks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_teachers">
+        <PropertyRef Name="idTeacher" />
+      </Principal>
+      <Dependent Role="tbl_homeWorks">
+        <PropertyRef Name="idTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_receivedHomeWork_tbl_homeWorks">
+    <End Type="schoolModel.tbl_homeWorks" Role="tbl_homeWorks" Multiplicity="1" />
+    <End Type="schoolModel.tbl_receivedHomeWorks" Role="tbl_receivedHomeWorks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_homeWorks">
+        <PropertyRef Name="idHomeWork" />
+      </Principal>
+      <Dependent Role="tbl_receivedHomeWorks">
+        <PropertyRef Name="idHomeWork" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_lessons_tbl_lessonType">
+    <End Type="schoolModel.tbl_lessonTypes" Role="tbl_lessonTypes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_lessons" Role="tbl_lessons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_lessonTypes">
+        <PropertyRef Name="idLessonType" />
+      </Principal>
+      <Dependent Role="tbl_lessons">
+        <PropertyRef Name="idLessonType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_lessons_tbl_level">
+    <End Type="schoolModel.tbl_levels" Role="tbl_levels" Multiplicity="1" />
+    <End Type="schoolModel.tbl_lessons" Role="tbl_lessons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_levels">
+        <PropertyRef Name="idLevel" />
+      </Principal>
+      <Dependent Role="tbl_lessons">
+        <PropertyRef Name="idLevel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_lessons_tbl_major">
+    <End Type="schoolModel.tbl_majors" Role="tbl_majors" Multiplicity="1" />
+    <End Type="schoolModel.tbl_lessons" Role="tbl_lessons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_majors">
+        <PropertyRef Name="idMajor" />
+      </Principal>
+      <Dependent Role="tbl_lessons">
+        <PropertyRef Name="idMajor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentRegister_tbl_level">
+    <End Type="schoolModel.tbl_levels" Role="tbl_levels" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentRegister" Role="tbl_studentRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_levels">
+        <PropertyRef Name="idLevel" />
+      </Principal>
+      <Dependent Role="tbl_studentRegister">
+        <PropertyRef Name="idLevel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentRegister_tbl_major">
+    <End Type="schoolModel.tbl_majors" Role="tbl_majors" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentRegister" Role="tbl_studentRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_majors">
+        <PropertyRef Name="idMajor" />
+      </Principal>
+      <Dependent Role="tbl_studentRegister">
+        <PropertyRef Name="idMajor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_messages_tbl_msgTypes">
+    <End Type="schoolModel.tbl_msgTypes" Role="tbl_msgTypes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_messages" Role="tbl_messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_msgTypes">
+        <PropertyRef Name="idMsgType" />
+      </Principal>
+      <Dependent Role="tbl_messages">
+        <PropertyRef Name="idMessageType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_registrationList_tbl_registrationCourses">
+    <End Type="schoolModel.tbl_registrationCourses" Role="tbl_registrationCourses" Multiplicity="0..1" />
+    <End Type="schoolModel.tbl_registrationList" Role="tbl_registrationList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_registrationCourses">
+        <PropertyRef Name="idRegcourse" />
+      </Principal>
+      <Dependent Role="tbl_registrationList">
+        <PropertyRef Name="idRegcourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentRegister_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentRegister" Role="tbl_studentRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_studentRegister">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentsEduData_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentsData" Role="tbl_studentsData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_studentsData">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentsDisciplines_tbl_terms">
+    <End Type="schoolModel.tbl_terms" Role="tbl_terms" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentsDisciplines" Role="tbl_studentsDisciplines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_terms">
+        <PropertyRef Name="idTerm" />
+      </Principal>
+      <Dependent Role="tbl_studentsDisciplines">
+        <PropertyRef Name="idTerm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_terms_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_terms" Role="tbl_terms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_terms">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_messageRecord">
+    <Key>
+      <PropertyRef Name="idMsgRecord" />
+    </Key>
+    <Property Name="idMsgRecord" Type="Int32" Nullable="false" />
+    <Property Name="idMessage" Type="Int32" Nullable="false" />
+    <Property Name="idReceiverType" Type="Int32" Nullable="false" />
+    <Property Name="idReceiver" Type="Int32" Nullable="false" />
+    <Property Name="isRead" Type="Boolean" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="isActiveSend" Type="Boolean" />
+    <Property Name="isActiveRecive" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_tbl_classes_tbl_levels">
+    <End Type="schoolModel.tbl_levels" Role="tbl_levels" Multiplicity="1" />
+    <End Type="schoolModel.tbl_classes" Role="tbl_classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_levels">
+        <PropertyRef Name="idLevel" />
+      </Principal>
+      <Dependent Role="tbl_classes">
+        <PropertyRef Name="idLevel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_classes_tbl_majors">
+    <End Type="schoolModel.tbl_majors" Role="tbl_majors" Multiplicity="1" />
+    <End Type="schoolModel.tbl_classes" Role="tbl_classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_majors">
+        <PropertyRef Name="idMajor" />
+      </Principal>
+      <Dependent Role="tbl_classes">
+        <PropertyRef Name="idMajor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_classes_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_classes" Role="tbl_classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_classes">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_debts_tbl_costs">
+    <End Type="schoolModel.tbl_costs" Role="tbl_costs" Multiplicity="0..1" />
+    <End Type="schoolModel.tbl_debts" Role="tbl_debts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_costs">
+        <PropertyRef Name="idCost" />
+      </Principal>
+      <Dependent Role="tbl_debts">
+        <PropertyRef Name="idCost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_debts_tbl_registrationCourses">
+    <End Type="schoolModel.tbl_registrationCourses" Role="tbl_registrationCourses" Multiplicity="0..1" />
+    <End Type="schoolModel.tbl_debts" Role="tbl_debts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_registrationCourses">
+        <PropertyRef Name="idRegcourse" />
+      </Principal>
+      <Dependent Role="tbl_debts">
+        <PropertyRef Name="idRegCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_homeWorks_tbl_lessons">
+    <End Type="schoolModel.tbl_lessons" Role="tbl_lessons" Multiplicity="1" />
+    <End Type="schoolModel.tbl_homeWorks" Role="tbl_homeWorks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_lessons">
+        <PropertyRef Name="idLesson" />
+      </Principal>
+      <Dependent Role="tbl_homeWorks">
+        <PropertyRef Name="idLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_messageRecord_tbl_messages">
+    <End Type="schoolModel.tbl_messages" Role="tbl_messages" Multiplicity="1" />
+    <End Type="schoolModel.tbl_messageRecord" Role="tbl_messageRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_messages">
+        <PropertyRef Name="idMessage" />
+      </Principal>
+      <Dependent Role="tbl_messageRecord">
+        <PropertyRef Name="idMessage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_messageRecord_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_messageRecord" Role="tbl_messageRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_messageRecord">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_regCourseLists_tbl_registrationCourses">
+    <End Type="schoolModel.tbl_registrationCourses" Role="tbl_registrationCourses" Multiplicity="1" />
+    <End Type="schoolModel.tbl_regCourseLists" Role="tbl_regCourseLists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_registrationCourses">
+        <PropertyRef Name="idRegcourse" />
+      </Principal>
+      <Dependent Role="tbl_regCourseLists">
+        <PropertyRef Name="idRegCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_registrationCourses_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_registrationCourses" Role="tbl_registrationCourses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_registrationCourses">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="View_studentMessage">
+    <Key>
+      <PropertyRef Name="idMsgRecord" />
+      <PropertyRef Name="idMessage" />
+      <PropertyRef Name="idReceiverType" />
+      <PropertyRef Name="idReceiver" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="body" />
+      <PropertyRef Name="date" />
+      <PropertyRef Name="idMessageType" />
+      <PropertyRef Name="idSenderType" />
+      <PropertyRef Name="idSender" />
+      <PropertyRef Name="idYear" />
+    </Key>
+    <Property Name="idMsgRecord" Type="Int32" Nullable="false" />
+    <Property Name="idMessage" Type="Int32" Nullable="false" />
+    <Property Name="idReceiverType" Type="Int32" Nullable="false" />
+    <Property Name="idReceiver" Type="Int32" Nullable="false" />
+    <Property Name="isRead" Type="Boolean" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="body" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="Int32" Nullable="false" />
+    <Property Name="idMessageType" Type="Int16" Nullable="false" />
+    <Property Name="idSenderType" Type="Int32" Nullable="false" />
+    <Property Name="idSender" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="isActiveSend" Type="Boolean" />
+    <Property Name="isActiveRecive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbl_exams">
+    <Key>
+      <PropertyRef Name="idExam" />
+    </Key>
+    <Property Name="idExam" Type="Int32" Nullable="false" />
+    <Property Name="idExamType" Type="Int32" Nullable="false" />
+    <Property Name="idLesson" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="idTerm" Type="Int32" Nullable="false" />
+    <Property Name="idTeacher" Type="Int32" Nullable="false" />
+    <Property Name="examTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="examDate" Type="Int32" Nullable="false" />
+    <Property Name="maxScore" Type="Int32" />
+    <Property Name="des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_tbl_exam_tbl_classes">
+    <End Type="schoolModel.tbl_classes" Role="tbl_classes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_exams" Role="tbl_exams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_classes">
+        <PropertyRef Name="idClass" />
+      </Principal>
+      <Dependent Role="tbl_exams">
+        <PropertyRef Name="idClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_exam_tbl_examType">
+    <End Type="schoolModel.tbl_examTypes" Role="tbl_examTypes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_exams" Role="tbl_exams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_examTypes">
+        <PropertyRef Name="idExamType" />
+      </Principal>
+      <Dependent Role="tbl_exams">
+        <PropertyRef Name="idExamType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_exam_tbl_lessons">
+    <End Type="schoolModel.tbl_lessons" Role="tbl_lessons" Multiplicity="1" />
+    <End Type="schoolModel.tbl_exams" Role="tbl_exams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_lessons">
+        <PropertyRef Name="idLesson" />
+      </Principal>
+      <Dependent Role="tbl_exams">
+        <PropertyRef Name="idLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_exams_tbl_teachers">
+    <End Type="schoolModel.tbl_teachers" Role="tbl_teachers" Multiplicity="1" />
+    <End Type="schoolModel.tbl_exams" Role="tbl_exams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_teachers">
+        <PropertyRef Name="idTeacher" />
+      </Principal>
+      <Dependent Role="tbl_exams">
+        <PropertyRef Name="idTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_exams_tbl_terms">
+    <End Type="schoolModel.tbl_terms" Role="tbl_terms" Multiplicity="1" />
+    <End Type="schoolModel.tbl_exams" Role="tbl_exams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_terms">
+        <PropertyRef Name="idTerm" />
+      </Principal>
+      <Dependent Role="tbl_exams">
+        <PropertyRef Name="idTerm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_scores_tbl_exams">
+    <End Type="schoolModel.tbl_exams" Role="tbl_exams" Multiplicity="1" />
+    <End Type="schoolModel.tbl_scores" Role="tbl_scores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_exams">
+        <PropertyRef Name="idExam" />
+      </Principal>
+      <Dependent Role="tbl_scores">
+        <PropertyRef Name="idExam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="View_studentInfo">
+    <Key>
+      <PropertyRef Name="idStudent" />
+      <PropertyRef Name="FName" />
+      <PropertyRef Name="LName" />
+      <PropertyRef Name="majorName" />
+      <PropertyRef Name="levelName" />
+      <PropertyRef Name="className" />
+      <PropertyRef Name="idClass" />
+      <PropertyRef Name="idYear" />
+      <PropertyRef Name="yearName" />
+    </Key>
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="majorName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="levelName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="className" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="yearName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="imgPersonal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_Exam">
+    <Key>
+      <PropertyRef Name="idExam" />
+      <PropertyRef Name="idLesson" />
+      <PropertyRef Name="idTeacher" />
+      <PropertyRef Name="idClass" />
+      <PropertyRef Name="idTerm" />
+      <PropertyRef Name="examTitle" />
+      <PropertyRef Name="examDate" />
+      <PropertyRef Name="idExamType" />
+      <PropertyRef Name="examType" />
+      <PropertyRef Name="idYear" />
+      <PropertyRef Name="lessonName" />
+      <PropertyRef Name="className" />
+      <PropertyRef Name="levelName" />
+    </Key>
+    <Property Name="idExam" Type="Int32" Nullable="false" />
+    <Property Name="idLesson" Type="Int32" Nullable="false" />
+    <Property Name="idTeacher" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="idTerm" Type="Int32" Nullable="false" />
+    <Property Name="examTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="examDate" Type="Int32" Nullable="false" />
+    <Property Name="idExamType" Type="Int32" Nullable="false" />
+    <Property Name="examType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="lessonName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="className" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="levelName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="maxScore" Type="Int32" />
+    <Property Name="des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_teacherSchedule">
+    <Key>
+      <PropertyRef Name="idDataTable" />
+      <PropertyRef Name="idDay" />
+      <PropertyRef Name="idBell" />
+      <PropertyRef Name="idYear" />
+      <PropertyRef Name="idClass" />
+      <PropertyRef Name="className" />
+      <PropertyRef Name="lessonName" />
+      <PropertyRef Name="idTeacher" />
+      <PropertyRef Name="idLesson" />
+    </Key>
+    <Property Name="idDataTable" Type="Int32" Nullable="false" />
+    <Property Name="idDay" Type="Int32" Nullable="false" />
+    <Property Name="idBell" Type="Int32" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="idClass" Type="Int32" Nullable="false" />
+    <Property Name="className" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lessonName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idTeacher" Type="Int32" Nullable="false" />
+    <Property Name="idLesson" Type="Int32" Nullable="false" />
+    <Property Name="idTeacher2" Type="Int32" />
+    <Property Name="idLesson2" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Setting">
+    <Key>
+      <PropertyRef Name="idSetting" />
+    </Key>
+    <Property Name="idSetting" Type="Int32" Nullable="false" />
+    <Property Name="schoolName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="manager" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="smsCount" Type="Int32" Nullable="false" />
+    <Property Name="Version" Type="Double" Nullable="false" />
+    <Property Name="teacherVersion" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_news">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="body" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="Int32" Nullable="false" />
+    <Property Name="receiverType" Type="Int32" Nullable="false" />
+    <Property Name="visitCount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_images">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="Int32" Nullable="false" />
+    <Property Name="idRow" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_imageType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_referendums">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idOption" Type="Int32" Nullable="false" />
+    <Property Name="Q" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Visibility" Type="Boolean" Nullable="false" />
+    <Property Name="startDate" Type="Int32" Nullable="false" />
+    <Property Name="endDate" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_answers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="userType" Type="Int32" Nullable="false" />
+    <Property Name="idRef" Type="Int32" Nullable="false" />
+    <Property Name="userAnswer" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="O1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="O2" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="O3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="O4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_students">
+    <Key>
+      <PropertyRef Name="idStudent" />
+    </Key>
+    <Property Name="idStudent" Type="Int32" Nullable="false" />
+    <Property Name="studentCode" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fatherName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="Boolean" Nullable="false" />
+    <Property Name="birthDate" Type="Int64" Nullable="false" />
+    <Property Name="idStatus" Type="Int32" Nullable="false" />
+    <Property Name="natCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="homePhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="imgPersonal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="imgManifest" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="leftHand" Type="Boolean" Nullable="false" />
+    <Property Name="homeAddress" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="studentMobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="idMarrige" Type="Int32" Nullable="false" />
+    <Property Name="religion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+    <Property Name="studUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pPass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idFatherEdu" Type="Int32" />
+    <Property Name="fJob" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fJobAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="fJobPhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="fPhone" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="motherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idMotherEdu" Type="Int32" />
+    <Property Name="mJob" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mJobAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mJobPhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="mPhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_tbl_absentation_tbl_student">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_absentation" Role="tbl_absentation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_absentation">
+        <PropertyRef Name="idStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_debts_tbl_students">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_debts" Role="tbl_debts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_debts">
+        <PropertyRef Name="idStud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_student_tbl_education">
+    <End Type="schoolModel.tbl_educations" Role="tbl_educations" Multiplicity="0..1" />
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_educations">
+        <PropertyRef Name="idEdu" />
+      </Principal>
+      <Dependent Role="tbl_students">
+        <PropertyRef Name="idMotherEdu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_student_tbl_marriges">
+    <End Type="schoolModel.tbl_marriges" Role="tbl_marriges" Multiplicity="1" />
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_marriges">
+        <PropertyRef Name="idMarrige" />
+      </Principal>
+      <Dependent Role="tbl_students">
+        <PropertyRef Name="idMarrige" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_receivedHomeWork_tbl_student">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_receivedHomeWorks" Role="tbl_receivedHomeWorks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_receivedHomeWorks">
+        <PropertyRef Name="idStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_registrationList_tbl_student">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="0..1" />
+    <End Type="schoolModel.tbl_registrationList" Role="tbl_registrationList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_registrationList">
+        <PropertyRef Name="idStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_scores_tbl_students">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_scores" Role="tbl_scores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_scores">
+        <PropertyRef Name="idStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_scores_tbl_students1">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_scores" Role="tbl_scores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_scores">
+        <PropertyRef Name="idStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentRegister_tbl_student">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentRegister" Role="tbl_studentRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_studentRegister">
+        <PropertyRef Name="idStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentRegister_tbl_students">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentRegister" Role="tbl_studentRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_studentRegister">
+        <PropertyRef Name="idStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_student_tbl_studentStatus">
+    <End Type="schoolModel.tbl_studentStatus" Role="tbl_studentStatus" Multiplicity="1" />
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_studentStatus">
+        <PropertyRef Name="idStatus" />
+      </Principal>
+      <Dependent Role="tbl_students">
+        <PropertyRef Name="idStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_StudentsCosts_tbl_student">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="0..1" />
+    <End Type="schoolModel.tbl_studentsCosts" Role="tbl_studentsCosts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_studentsCosts">
+        <PropertyRef Name="idStud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentsCosts_tbl_students">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="0..1" />
+    <End Type="schoolModel.tbl_studentsCosts" Role="tbl_studentsCosts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_studentsCosts">
+        <PropertyRef Name="idStud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentsDisciplines_tbl_student">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentsDisciplines" Role="tbl_studentsDisciplines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_studentsDisciplines">
+        <PropertyRef Name="idStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_studentsEduData_tbl_student">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_studentsData" Role="tbl_studentsData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_studentsData">
+        <PropertyRef Name="idStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_payments">
+    <Key>
+      <PropertyRef Name="idPay" />
+    </Key>
+    <Property Name="idPay" Type="Int32" Nullable="false" />
+    <Property Name="idStud" Type="Int32" Nullable="false" />
+    <Property Name="idPayType" Type="Int16" Nullable="false" />
+    <Property Name="idYear" Type="Int32" Nullable="false" />
+    <Property Name="value" Type="Int32" Nullable="false" />
+    <Property Name="issuTracking" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="cashDate" Type="Int32" />
+    <Property Name="cardDate" Type="Int32" />
+    <Property Name="chDate" Type="Int32" />
+    <Property Name="chNumber" Type="Int32" />
+    <Property Name="chBank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fishNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fishDate" Type="Int32" />
+    <Property Name="financialDate" Type="Int32" Nullable="false" />
+    <Property Name="docNo" Type="Int32" Nullable="false" />
+    <Property Name="isOrg" Type="Boolean" Nullable="false" />
+    <Property Name="Des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_tbl_editTransections_tbl_payments">
+    <End Type="schoolModel.tbl_payments" Role="tbl_payments" Multiplicity="1" />
+    <End Type="schoolModel.tbl_editTransections" Role="tbl_editTransections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_payments">
+        <PropertyRef Name="idPay" />
+      </Principal>
+      <Dependent Role="tbl_editTransections">
+        <PropertyRef Name="idPayment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_payments_tbl_payTypes">
+    <End Type="schoolModel.tbl_payTypes" Role="tbl_payTypes" Multiplicity="1" />
+    <End Type="schoolModel.tbl_payments" Role="tbl_payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_payTypes">
+        <PropertyRef Name="idPayType" />
+      </Principal>
+      <Dependent Role="tbl_payments">
+        <PropertyRef Name="idPayType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_payments_tbl_students">
+    <End Type="schoolModel.tbl_students" Role="tbl_students" Multiplicity="1" />
+    <End Type="schoolModel.tbl_payments" Role="tbl_payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_students">
+        <PropertyRef Name="idStudent" />
+      </Principal>
+      <Dependent Role="tbl_payments">
+        <PropertyRef Name="idStud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_payments_tbl_years">
+    <End Type="schoolModel.tbl_years" Role="tbl_years" Multiplicity="1" />
+    <End Type="schoolModel.tbl_payments" Role="tbl_payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_years">
+        <PropertyRef Name="idYear" />
+      </Principal>
+      <Dependent Role="tbl_payments">
+        <PropertyRef Name="idYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
