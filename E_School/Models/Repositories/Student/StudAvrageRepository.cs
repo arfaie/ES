@@ -135,7 +135,7 @@ namespace E_School.Models.Repositories
             try
             {
                 if (db.tbl_Avrages.Any())
-                    return db.tbl_Avrages.OrderByDescending(p => p.idSetting).First().idSetting;
+                    return db.tbl_Avrages.OrderByDescending(p => p.id).First().id;
                 else
                     return 0;
             }

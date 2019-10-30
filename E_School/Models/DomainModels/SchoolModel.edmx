@@ -38,12 +38,13 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="idDesScore" Type="int" Nullable="false" />
-          <Property Name="Score" Type="float" Nullable="false" />
           <Property Name="idYear" Type="int" Nullable="false" />
+          <Property Name="idMonth" Type="int" Nullable="false" />
           <Property Name="idClass" Type="int" Nullable="false" />
           <Property Name="idLesson" Type="int" Nullable="false" />
           <Property Name="idStudent" Type="int" Nullable="false" />
+          <Property Name="idDesScore" Type="int" Nullable="false" />
+          <Property Name="Score" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="tbl_bells">
           <Key>
@@ -4418,12 +4419,13 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="idDesScore" Type="Int32" Nullable="false" />
-          <Property Name="Score" Type="Double" Nullable="false" />
           <Property Name="idYear" Type="Int32" Nullable="false" />
+          <Property Name="idMonth" Type="Int32" Nullable="false" />
           <Property Name="idClass" Type="Int32" Nullable="false" />
           <Property Name="idLesson" Type="Int32" Nullable="false" />
           <Property Name="idStudent" Type="Int32" Nullable="false" />
+          <Property Name="idDesScore" Type="Int32" Nullable="false" />
+          <Property Name="Score" Type="Double" Nullable="false" />
         </EntityType>
         
         </Schema>
@@ -5334,12 +5336,13 @@ FROM [dbo].[view_Terms] AS [view_Terms]</DefiningQuery>
           <EntitySetMapping Name="tbl_Avrages">
             <EntityTypeMapping TypeName="schoolModel.tbl_Avrages">
               <MappingFragment StoreEntitySet="tbl_Avrages">
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="idDesScore" ColumnName="idDesScore" />
                 <ScalarProperty Name="idStudent" ColumnName="idStudent" />
                 <ScalarProperty Name="idLesson" ColumnName="idLesson" />
                 <ScalarProperty Name="idClass" ColumnName="idClass" />
+                <ScalarProperty Name="idMonth" ColumnName="idMonth" />
                 <ScalarProperty Name="idYear" ColumnName="idYear" />
-                <ScalarProperty Name="Score" ColumnName="Score" />
-                <ScalarProperty Name="idDesScore" ColumnName="idDesScore" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

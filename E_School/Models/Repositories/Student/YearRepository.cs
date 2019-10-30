@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using E_School.Models.DomainModels;
 using System.Data;
+using System.Globalization;
 
 namespace E_School.Models.Repositories.api
 {
@@ -189,6 +190,21 @@ namespace E_School.Models.Repositories.api
                     this.db = null;
                 }
             }
+        }
+        public int getThisYear()
+        {
+            DateTime d = DateTime.Now;
+            PersianCalendar pc = new PersianCalendar();
+            string y = pc.GetYear(d).ToString();
+            string m = pc.GetMonth(d).ToString();
+            if (m.Count() == 1)
+                m = "0" + m;
+            string day = pc.GetDayOfMonth(d).ToString();
+            if (day.Count() == 1)
+                day = "0" + day;
+            int date = int.Parse(y + m + day);
+            int idYear = Where(x => x.yearStart <= date && x.yearEnd >= date).FirstOrDefault().idYear;
+            return idYear;
         }
 
         ~YearRepository()
